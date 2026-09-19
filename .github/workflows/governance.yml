@@ -1,0 +1,59 @@
+name: Governance and baseline checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  pull_request_target:
+    branches: [main]
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: Optional open PR number to re-evaluate against trusted main policy
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap-checks:
+    if: github.event_name != 'pull_request_target'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Test scope enforcement and publication guards
+        run: python3 -m unittest discover -s tests/governance -v
+      - name: Validate files, links and role registry
+        run: python3 scripts/check_repository.py
+      - name: Inspect tracked files and reachable publication history
+        run: python3 scripts/publication_scan.py --history HEAD
+
+  trusted-scope:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: read
+      statuses: write
+    steps:
+      # On pull_request_target, both workflow and checkout come from trusted
+      # default-branch code. Never check out a PR head/merge or execute its files.
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Test trusted policy evaluator
+        run: python3 -m unittest discover -s tests/governance -v
+      - name: Publish immutable-author and approved-path result on PR head
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/check_pr_scope.py
