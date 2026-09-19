@@ -1,6 +1,6 @@
 # Temporary branch-protection verification
 
-This unmerged validation-only PR intentionally begins with a broken local link.
-It verifies that a failing required check blocks the owner, then that a fix permits checks without self-approval.
+This unmerged validation-only PR began with a broken local link.
+The link is now fixed to verify that both required checks pass without requiring the sole owner to approve their own PR.
 
-[Probe](missing-validation-target.md)
+[README](../README.md)
