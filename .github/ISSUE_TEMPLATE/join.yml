@@ -1,0 +1,23 @@
+name: Member onboarding
+description: Request verified identity and role registration; no repository write access
+title: "[JOIN] <role> / <GitHub login>"
+body:
+  - type: input
+    id: role
+    attributes:
+      label: Role from ORIGINAL_TASKS.md
+    validations:
+      required: true
+  - type: input
+    id: account
+    attributes:
+      label: GitHub login (post from this account)
+    validations:
+      required: true
+  - type: textarea
+    id: confirmation
+    attributes:
+      label: Confirm Fork and PLAN-first workflow
+      description: Do not post student numbers, email addresses, identity documents or private contact information. Yu verifies your real identity through an existing private channel.
+    validations:
+      required: true

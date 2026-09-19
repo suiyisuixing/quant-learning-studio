@@ -1,0 +1,16 @@
+name: Scoped task
+description: Define a task without self-granting implementation permission
+title: "[TASK] <role> / <task>"
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Goal, inputs, outputs, dependencies and proposed paths
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Tests, deliverables and acceptance evidence
+    validations:
+      required: true

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "owner": {
+    "login": "suiyisuixing",
+    "id": 245487910
+  },
+  "members": [
+    {
+      "role": "zaixuan-ji",
+      "name": "Zaixuan.Ji",
+      "login": null,
+      "id": null,
+      "identity_status": "PENDING",
+      "plan_path": "team/zaixuan-ji/PLAN.md",
+      "module_paths": [],
+      "implementation_approval": null
+    },
+    {
+      "role": "xingze-zhu",
+      "name": "Xingze.Zhu",
+      "login": null,
+      "id": null,
+      "identity_status": "PENDING",
+      "plan_path": "team/xingze-zhu/PLAN.md",
+      "module_paths": [
+        "content/cases/",
+        "content/learning/",
+        "content/reviews/"
+      ],
+      "implementation_approval": null
+    },
+    {
+      "role": "tianqi-hao",
+      "name": "Tianqi.Hao",
+      "login": null,
+      "id": null,
+      "identity_status": "PENDING",
+      "plan_path": "team/tianqi-hao/PLAN.md",
+      "module_paths": [],
+      "implementation_approval": null
+    },
+    {
+      "role": "yifan-mao",
+      "name": "Yifan.Mao",
+      "login": null,
+      "id": null,
+      "identity_status": "PENDING",
+      "plan_path": "team/yifan-mao/PLAN.md",
+      "module_paths": [
+        "materials/factors/",
+        "testing/feedback/yifan-mao/",
+        "testing/material-evaluation/yifan-mao/"
+      ],
+      "implementation_approval": null
+    },
+    {
+      "role": "guanjie-xue",
+      "name": "Guanjie.Xue",
+      "login": null,
+      "id": null,
+      "identity_status": "PENDING",
+      "plan_path": "team/guanjie-xue/PLAN.md",
+      "module_paths": [
+        "materials/risk/",
+        "testing/feedback/guanjie-xue/",
+        "testing/material-evaluation/guanjie-xue/"
+      ],
+      "implementation_approval": null
+    },
+    {
+      "role": "yuntao-min",
+      "name": "Yuntao.Min",
+      "login": null,
+      "id": null,
+      "identity_status": "PENDING",
+      "plan_path": "team/yuntao-min/PLAN.md",
+      "module_paths": [
+        "materials/markets/",
+        "testing/feedback/yuntao-min/",
+        "testing/material-evaluation/yuntao-min/"
+      ],
+      "implementation_approval": null
+    }
+  ]
+}
