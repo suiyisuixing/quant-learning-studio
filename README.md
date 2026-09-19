@@ -8,13 +8,13 @@
 
 ## 开始协作
 - [启动入口](prompts/START_HERE.md) · [完整 Bootstrap](prompts/00_CHATGPTWORK_BOOTSTRAP.md) · [产品总要求](prompts/01_PRODUCT_MASTER.md)
-- [七人名册](docs/TEAM_ROSTER.md) · [七个角色与首批任务](docs/TASKS.md) · [完整阶段计划](docs/PROJECT_PLAN.md)
+- [七人名册](docs/TEAM_ROSTER.md) · [七人完整任务与提示词](docs/TASKS.md) · [全部任务与依赖](docs/PROJECT_PLAN.md)
 - [加入 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1) · [实际访问模型](docs/ACCESS_MODEL.md) · [模块边界](docs/MODULE_BOUNDARIES.md)
 - [七份个人提示词](prompts/members/) · [四份网站 AI 提示词](prompts/runtime/) · [填写模板](templates/)
 - [四项验收](docs/FOUR_FEATURES.md) · [统一接口](docs/INTERFACES.md) · [UI 基线](docs/UI_BASELINE.md) · [完整演示](docs/DEMO_SCRIPT.md)
 - [本次初始化状态](docs/INITIALIZATION_REPORT.md) · [输入来源](docs/requirements/PROVENANCE.md) · [许可状态](LICENSE_STATUS.md)
 
-开发者仅 Yu、Zaixuan、Xiangze、Tianqi：先本人 PLAN，范围确认后从 Fork/任务分支提 PR，Yu 最终合并。三位资料成员 Yifan、Guanjie、Yuntao 不写代码，不要求 Fork；按批次交资料、真人测试和复测记录，由开发者保留原作者代录。
+每人从 [启动入口](prompts/START_HERE.md) 复制本人的整份提示词，按依赖完成全部任务，不按周派工、不在首个模块后停止。开发者仅 Yu、Zaixuan、Xiangze、Tianqi：先覆盖全部职责的本人 PLAN，范围确认后连续实施并从 Fork/任务分支提 PR，Yu 最终合并。三位资料成员 Yifan、Guanjie、Yuntao 不写代码，不要求 Fork；按批次交资料、真人测试和复测记录，由开发者保留原作者代录。
 
 ## 当前可运行的检查
 治理检查需要 Python 3.11+，使用标准库：
