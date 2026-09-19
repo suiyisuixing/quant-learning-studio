@@ -8,4 +8,4 @@
 
 仓库：https://github.com/suiyisuixing/quant-learning-studio
 
-第一批角色任务与加入 Issue 的真实链接在 [任务索引](TASKS.md) 更新。
+实际加入入口：[成员加入 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1)。七个角色任务的真实链接见 [任务索引](TASKS.md)。

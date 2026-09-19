@@ -42,3 +42,10 @@
 ## 验证分层
 
 协作规则测试、模块单元测试、fixture 验证、普通浏览器真实 HTTP、真实 DeepSeek、真人测试、部署验收各自记录。公开数据许可不等于允许发送第三方；没有 API 授权不作付费实验。展示收益和风险均来自确定性引擎，模拟效果不能冒充基金实绩。
+
+## 实际 GitHub 里程碑
+
+- [M0 · 身份、认可源码与 PLAN 批准](https://github.com/suiyisuixing/quant-learning-studio/milestone/1)
+- [M1 · 统一接口与获准数据](https://github.com/suiyisuixing/quant-learning-studio/milestone/2)
+- [M2 · 本人模块与集成](https://github.com/suiyisuixing/quant-learning-studio/milestone/3)
+- [M3 · 真实验证与最终交付](https://github.com/suiyisuixing/quant-learning-studio/milestone/4)

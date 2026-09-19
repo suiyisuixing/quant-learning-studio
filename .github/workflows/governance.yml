@@ -37,7 +37,7 @@ jobs:
       - name: Inspect tracked files and reachable publication history
         run: python3 scripts/publication_scan.py --history HEAD
 
-  trusted-scope:
+  scope-evaluator:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10

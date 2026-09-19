@@ -19,6 +19,7 @@
 ## 计划与规则
 
 - [项目完整计划](docs/PROJECT_PLAN.md)
+- [七人任务 Issue](docs/TASKS.md) 与 [成员加入 Issue](https://github.com/suiyisuixing/quant-learning-studio/issues/1)
 - [模块边界](docs/MODULE_BOUNDARIES.md)
 - [协作权限与 main 保护](docs/PERMISSIONS.md)
 - [共同接口草案](contracts/README.md)
