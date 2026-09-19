@@ -10,7 +10,7 @@
 - 已在项目 .venv 安装源码锁定依赖，没有修改全局 Python 或 Conda；凭据清空，测试使用新临时数据库。未读取生产数据，没有真实 API 或付费调用。
 - 本次重新执行：源产品的 58 项测试通过；当时治理 48 项通过，共 106；随后新增 2 项 CSV 白名单用例，治理检查已重新运行 50 项通过；最终 PR CI 还会验证合计 108 项。10 个本地 HTTP 并发场景通过，自动账户数不计真人。前端语法检查通过。
 - 本次 macOS 安装的 Chrome 真实 loopback HTTP 浏览器检查 30 项通过，page_errors=[]；包含注册、计算、规则讲解、报告重开、桌面和 390px 窄屏。人工查看本轮 desktop-home 与 mobile-results 截图；未重画 UI。窄屏不是物理手机/Safari 测试。旧截图没有当作本轮证据。
-- main 当前要求 bootstrap-checks/trusted-scope、strict 更新、讨论解决；enforce_admins=true、禁止强推/删除。审批数为 0、CODEOWNERS 不强制自审，只有 Yu 有合并权；owner 能修改仓库设置这一所有权能力没有被假装取消。此前验证 PR #9 已关闭未合并，真实 BLOCKED→CLEAN 证据只算旧 bootstrap 保护验证，不充当 R3 成员 Fork 测试。
+- main 当前要求 repository-checks/product-checks/trusted-scope、strict 更新、讨论解决；enforce_admins=true、禁止强推/删除。审批数为 0、CODEOWNERS 不强制自审，只有 Yu 有合并权；owner 能修改仓库设置这一所有权能力没有被假装取消。此前验证 PR #9 已关闭未合并，真实 BLOCKED→CLEAN 证据只算旧 bootstrap 保护验证，不充当 R3 成员 Fork 测试。
 - R3 范围检查新增七人/四开发约束、旧姓名去重、非开发代码拒绝、实际 head/policy 绑定与树元数据模式检查。R3 在合并前只有本地/PR 检查证据；不能声称 main 已运行 R3 特权门禁或真实成员 Fork 已通过。
 
 ## F1—F4 真实缺口
@@ -25,3 +25,7 @@
 
 ## 待完成与下一步
 Yu 审阅并最终合并 R3 治理 PR；四名开发者填写产品 PLAN，Yu 批准后才实施。Tianqi 补本人确切 GitHub login；两个已知成员可在加入 Issue 作本人确认后重新核对可分配性。三名资料成员交简单计划、认领不重复批次。后续真实数据/API 许可与预算另行确认，不需要现在公开密钥。无公网部署、购买服务或协作者邀请。
+
+## 本轮发现并修正的 CI 验收问题
+
+首个 R3 提案的工作流在 GitHub 配置校验阶段失败，没有执行产品检查。旧 main 的 pull_request_target 流程留下同名 bootstrap-checks 的 skipped 记录，不能当作通过。现将只读产品/仓库检查拆为 checks.yml（repository-checks、product-checks，均无事件跳过条件），可信状态评估独立在 governance.yml。main 的必需检查改为这两个实际执行名称及 trusted-scope，均绑定 GitHub Actions App 15368；缺少新检查时 PR 必须 BLOCKED。最终是否通过仅看修正后新 HEAD 的真实运行和 Issue #10 的回验记录，首个失败运行不计为通过。

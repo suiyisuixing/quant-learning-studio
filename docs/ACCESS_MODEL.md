@@ -73,7 +73,7 @@ F1—F4规范、UI基线、演示放行规则和跨模块contracts由Yu维护。
 
 ## 本仓库采用的实际方案与激活边界
 
-本节是本仓库的具体配置，不将上面的可选管理员绕过方案冒充已启用。main 已要求 PR、strict 更新、GitHub Actions App 15368 发布的 bootstrap-checks 与 trusted-scope、解决讨论；禁止强推/删除，enforce_admins=true。required_approving_review_count=0，require_code_owner_reviews=false，避免唯一 owner 自审死锁。成员没有上游写权，因此仍仅 Yu 手动合并；没有另加成员审批或管理员检查绕过。owner 作为仓库所有者能改设置，规则不能阻止所有者修改规则。
+本节是本仓库的具体配置，不将上面的可选管理员绕过方案冒充已启用。main 已要求 PR、strict 更新、GitHub Actions App 15368 发布的 repository-checks、product-checks 与 trusted-scope、解决讨论；禁止强推/删除，enforce_admins=true。required_approving_review_count=0，require_code_owner_reviews=false，避免唯一 owner 自审死锁。成员没有上游写权，因此仍仅 Yu 手动合并；没有另加成员审批或管理员检查绕过。owner 作为仓库所有者能改设置，规则不能阻止所有者修改规则。
 
 已关闭且未合并的 [验证 PR #9](https://github.com/suiyisuixing/quant-learning-studio/pull/9) 在检查失败时 BLOCKED，修正后零 reviews 达到 CLEAN。那是之前 bootstrap 的真实 owner PR 测试，不能算 R3 新测试或成员 Fork 测试。R3 新检查证据以 INITIALIZATION_REPORT.md 为准。
 
