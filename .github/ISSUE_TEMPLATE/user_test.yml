@@ -1,0 +1,17 @@
+name: 真人测试问题与复测（公开脱敏）
+description: 记录实际操作，自动化账户不计真人；敏感安全问题受限反馈给 Yu
+title: "[TEST] 操作问题与复测"
+labels: ["type:research-test", "status:todo"]
+body:
+  - type: textarea
+    id: observation
+    attributes:
+      label: 匿名任务、同意状态、实际日期/版本、步骤、预期与实际
+      description: 不公开稳定用户标识、联系方式或受限截图。未测试只写计划。
+    validations:
+      required: true
+  - type: textarea
+    id: retest
+    attributes:
+      label: 对应修复与真实复测
+      description: 未复测写未复测；修代码由开发者承担。

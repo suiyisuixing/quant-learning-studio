@@ -1,0 +1,44 @@
+{
+  "revision": "R3",
+  "source": "week2.docx page 1 + current user request",
+  "preserve_approved_ui": true,
+  "features": [
+    {
+      "id": "F1",
+      "name": "市场数据的显示",
+      "must_implement": true,
+      "must_demo": true,
+      "verification_status": "NOT_RUN"
+    },
+    {
+      "id": "F2",
+      "name": "人工智能的策划和分析",
+      "must_implement": true,
+      "must_demo": true,
+      "verification_status": "NOT_RUN"
+    },
+    {
+      "id": "F3",
+      "name": "模拟经营的沙盘演练",
+      "must_implement": true,
+      "must_demo": true,
+      "verification_status": "NOT_RUN"
+    },
+    {
+      "id": "F4",
+      "name": "最后的人工智能分析问题与复盘",
+      "must_implement": true,
+      "must_demo": true,
+      "verification_status": "NOT_RUN"
+    }
+  ],
+  "journey": [
+    "F1",
+    "F2",
+    "USER_CONFIRMS_EXACT_PLAN",
+    "F3",
+    "F4"
+  ],
+  "separate_pre_and_post_ai": true,
+  "artifact_validation_is_not_product_acceptance": true
+}

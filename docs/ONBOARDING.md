@@ -1,11 +1,3 @@
-# 成员加入
+# 当前协作入口 · R3
 
-在仓库的成员加入 Issue 中，使用本人 GitHub 账号回复角色名与账号名。不要公开学号、邮箱、证件、联系方式或登录凭据。Yu 通过已有的私人渠道确认本人，随后只把公开账号、不可变数字 ID、角色与路径写入主分支注册表。
-
-未核实的账号一律 PENDING，不按姓名搜索并邀请。所有成员可公开读取、下载和 Fork。Fork 是成员自己的仓库；主仓库不新增 Write、Maintain、Admin 权限。
-
-身份核实后先提交本人 PLAN。PLAN-only PR 只允许修改本人的唯一 PLAN 文件。Yu 认可内容后记录批准的 Git blob SHA 和具体路径。填写模板不等于授权，账号核实也不等于实施授权。
-
-仓库：https://github.com/suiyisuixing/quant-learning-studio
-
-实际加入入口：[成员加入 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1)。七个角色任务的真实链接见 [任务索引](TASKS.md)。
+请使用 ACCESS_MODEL.md、TEAM_ROSTER.md 和 TASKS.md。四名开发者先本人计划再 Fork PR，最终由 Yu 合并；三名非开发成员使用资料/测试文件或 Issue，由开发者保留原作者代录，不要求 GitHub。实际运行状态见 INITIALIZATION_REPORT.md。

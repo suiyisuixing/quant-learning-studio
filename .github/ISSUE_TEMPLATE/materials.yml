@@ -1,0 +1,17 @@
+name: 论文资料与测试批次认领（非开发）
+description: 可选 Issue 提交通道；交模板文件也可，不要求编程或 Git
+title: "[MATERIAL] 批次认领与交接"
+labels: ["type:research-test", "status:todo"]
+body:
+  - type: textarea
+    id: batch
+    attributes:
+      label: 本人、批次、学生问题、资料与预计交付
+      description: 用 RESEARCH_TEST_PLAN；核对重复批次。不要公开受限原文或个人身份。
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: 实际资料/测试记录与来源（未发生留未发生）
+      description: 代录时注明原作者、收件时间、代录者与许可核查。资料成员不写代码。

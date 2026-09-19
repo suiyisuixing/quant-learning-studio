@@ -1,85 +1,198 @@
 {
-  "version": 1,
+  "version": 2,
+  "revision": "R3",
   "owner": {
     "login": "suiyisuixing",
     "id": 245487910
   },
   "members": [
     {
-      "role": "zaixuan-ji",
-      "name": "Zaixuan.Ji",
-      "login": null,
-      "id": null,
-      "identity_status": "PENDING",
-      "plan_path": "team/zaixuan-ji/PLAN.md",
-      "module_paths": [],
-      "implementation_approval": null
+      "role": "yu-wei",
+      "name": "Yu.Wei",
+      "display_name_aliases": [],
+      "legacy_role_slug": null,
+      "is_developer": true,
+      "login": "suiyisuixing",
+      "id": 245487910,
+      "identity_status": "VERIFIED",
+      "identity_basis": "user-supplied R3 mapping + exact GitHub users API, 2026-09-19",
+      "participation_status": "OWNER",
+      "plan_path": "plans/yu-wei/PLAN.md",
+      "plan_scope_active": true,
+      "scope_active": false,
+      "code_paths": [],
+      "document_paths": [
+        "evidence/yu-wei/"
+      ],
+      "source_mapping_status": "VERIFIED_BASELINE_WITH_PLANNED_MODULE_EXTRACTIONS",
+      "implementation_approval": null,
+      "submission_mode": "OWNER_BRANCH_PR",
+      "direct_upstream_write": true
     },
     {
-      "role": "xingze-zhu",
-      "name": "Xingze.Zhu",
-      "login": null,
-      "id": null,
-      "identity_status": "PENDING",
-      "plan_path": "team/xingze-zhu/PLAN.md",
-      "module_paths": [
+      "role": "zaixuan-ji",
+      "name": "Zaixuan.Ji",
+      "display_name_aliases": [],
+      "legacy_role_slug": null,
+      "is_developer": true,
+      "login": "3165349449-tech",
+      "id": 330387285,
+      "identity_status": "VERIFIED",
+      "identity_basis": "user-supplied R3 mapping + exact GitHub users API, 2026-09-19",
+      "participation_status": "AWAITING_MEMBER_CONFIRMATION",
+      "plan_path": "plans/zaixuan-ji/PLAN.md",
+      "plan_scope_active": true,
+      "scope_active": false,
+      "code_paths": [
+        "web/app.js",
+        "web/style.css",
+        "web/index.html",
+        "web/favicon.svg",
+        "app/accounts.py",
+        "app/storage.py",
+        "app/knowledge_store.py",
+        "tests/test_accounts.py",
+        "tests/test_storage.py",
+        "tests/test_knowledge_store.py"
+      ],
+      "document_paths": [
+        "evidence/zaixuan-ji/"
+      ],
+      "source_mapping_status": "VERIFIED_BASELINE_WITH_PLANNED_MODULE_EXTRACTIONS",
+      "implementation_approval": null,
+      "submission_mode": "FORK_PR",
+      "direct_upstream_write": false
+    },
+    {
+      "role": "xiangze-zhu",
+      "name": "Xiangze.Zhu",
+      "display_name_aliases": [
+        "Xingze.Zhu"
+      ],
+      "legacy_role_slug": "xingze-zhu",
+      "is_developer": true,
+      "login": "trave1er999",
+      "id": 243565339,
+      "identity_status": "VERIFIED",
+      "identity_basis": "user-supplied R3 mapping + exact GitHub users API, 2026-09-19",
+      "participation_status": "AWAITING_MEMBER_CONFIRMATION",
+      "plan_path": "plans/xiangze-zhu/PLAN.md",
+      "plan_scope_active": true,
+      "scope_active": false,
+      "code_paths": [
+        "app/content.py",
+        "app/cases.py",
+        "tests/test_cases.py",
+        "tests/test_content.py"
+      ],
+      "document_paths": [
+        "evidence/xiangze-zhu/",
         "content/cases/",
-        "content/learning/",
+        "content/lessons/",
+        "content/glossary/",
         "content/reviews/"
       ],
-      "implementation_approval": null
+      "source_mapping_status": "VERIFIED_BASELINE_WITH_PLANNED_MODULE_EXTRACTIONS",
+      "implementation_approval": null,
+      "submission_mode": "FORK_PR",
+      "direct_upstream_write": false
     },
     {
       "role": "tianqi-hao",
       "name": "Tianqi.Hao",
+      "display_name_aliases": [],
+      "legacy_role_slug": null,
+      "is_developer": true,
       "login": null,
       "id": null,
-      "identity_status": "PENDING",
-      "plan_path": "team/tianqi-hao/PLAN.md",
-      "module_paths": [],
-      "implementation_approval": null
+      "identity_status": "AWAITING_LOGIN",
+      "identity_basis": null,
+      "participation_status": "AWAITING_MEMBER_CONFIRMATION",
+      "plan_path": "plans/tianqi-hao/PLAN.md",
+      "plan_scope_active": false,
+      "scope_active": false,
+      "code_paths": [
+        "app/ai.py",
+        "app/retrieval.py",
+        "app/learning.py",
+        "app/reports.py",
+        "tests/test_ai.py",
+        "tests/test_retrieval.py",
+        "tests/test_learning.py",
+        "tests/test_reports.py"
+      ],
+      "document_paths": [
+        "evidence/tianqi-hao/",
+        "prompts/runtime/"
+      ],
+      "source_mapping_status": "VERIFIED_BASELINE_WITH_PLANNED_MODULE_EXTRACTIONS",
+      "implementation_approval": null,
+      "submission_mode": "FORK_PR",
+      "direct_upstream_write": false
     },
     {
       "role": "yifan-mao",
       "name": "Yifan.Mao",
+      "display_name_aliases": [],
+      "legacy_role_slug": null,
+      "is_developer": false,
       "login": null,
       "id": null,
-      "identity_status": "PENDING",
-      "plan_path": "team/yifan-mao/PLAN.md",
-      "module_paths": [
-        "materials/factors/",
-        "testing/feedback/yifan-mao/",
-        "testing/material-evaluation/yifan-mao/"
-      ],
-      "implementation_approval": null
+      "identity_status": "GITHUB_OPTIONAL",
+      "identity_basis": null,
+      "participation_status": "AWAITING_MEMBER_CONFIRMATION",
+      "plan_path": "plans/yifan-mao/PLAN.md",
+      "plan_scope_active": false,
+      "scope_active": false,
+      "code_paths": [],
+      "document_paths": [],
+      "source_mapping_status": "NOT_APPLICABLE",
+      "implementation_approval": null,
+      "submission_mode": "FILE_OR_ISSUE_DEVELOPER_RECORDS",
+      "direct_upstream_write": false
     },
     {
       "role": "guanjie-xue",
       "name": "Guanjie.Xue",
+      "display_name_aliases": [],
+      "legacy_role_slug": null,
+      "is_developer": false,
       "login": null,
       "id": null,
-      "identity_status": "PENDING",
-      "plan_path": "team/guanjie-xue/PLAN.md",
-      "module_paths": [
-        "materials/risk/",
-        "testing/feedback/guanjie-xue/",
-        "testing/material-evaluation/guanjie-xue/"
-      ],
-      "implementation_approval": null
+      "identity_status": "GITHUB_OPTIONAL",
+      "identity_basis": null,
+      "participation_status": "AWAITING_MEMBER_CONFIRMATION",
+      "plan_path": "plans/guanjie-xue/PLAN.md",
+      "plan_scope_active": false,
+      "scope_active": false,
+      "code_paths": [],
+      "document_paths": [],
+      "source_mapping_status": "NOT_APPLICABLE",
+      "implementation_approval": null,
+      "submission_mode": "FILE_OR_ISSUE_DEVELOPER_RECORDS",
+      "direct_upstream_write": false
     },
     {
       "role": "yuntao-min",
       "name": "Yuntao.Min",
+      "display_name_aliases": [],
+      "legacy_role_slug": null,
+      "is_developer": false,
       "login": null,
       "id": null,
-      "identity_status": "PENDING",
-      "plan_path": "team/yuntao-min/PLAN.md",
-      "module_paths": [
-        "materials/markets/",
-        "testing/feedback/yuntao-min/",
-        "testing/material-evaluation/yuntao-min/"
-      ],
-      "implementation_approval": null
+      "identity_status": "GITHUB_OPTIONAL",
+      "identity_basis": null,
+      "participation_status": "AWAITING_MEMBER_CONFIRMATION",
+      "plan_path": "plans/yuntao-min/PLAN.md",
+      "plan_scope_active": false,
+      "scope_active": false,
+      "code_paths": [],
+      "document_paths": [],
+      "source_mapping_status": "NOT_APPLICABLE",
+      "implementation_approval": null,
+      "submission_mode": "FILE_OR_ISSUE_DEVELOPER_RECORDS",
+      "direct_upstream_write": false
     }
-  ]
+  ],
+  "activation_note": "Exact archive/UI baseline verified. Code paths include existing files and explicitly planned new modules; shared app/main.py remains owner-only. All implementation scopes remain inactive until exact member PLAN approval. The R3 policy becomes trusted only after this owner PR is merged."
 }

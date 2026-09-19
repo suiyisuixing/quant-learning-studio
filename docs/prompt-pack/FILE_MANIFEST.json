@@ -1,0 +1,191 @@
+{
+  "source_sha256": "fc4bcd3d6cb1474e362b114e0c3a0e62059761015c39df7123fed3f1a265a22c",
+  "sections": [
+    {
+      "source_section": "README.md",
+      "initial_destination": "docs/prompt-pack/README.md",
+      "section_sha256": "eeaa84662d583617bc0cb345a9f349650d5b1016dd5f715f2127bf7a7446c035"
+    },
+    {
+      "source_section": "docs/REVISION_R3.md",
+      "initial_destination": "docs/REVISION_R3.md",
+      "section_sha256": "e6d4f2d4bcfefdfba64a70ae907a76bd12f8ec3765e7d00f12b033957d76127c"
+    },
+    {
+      "source_section": "docs/TEAM_ROSTER.md",
+      "initial_destination": "docs/TEAM_ROSTER.md",
+      "section_sha256": "8621f18e7880260aea0f6a05b2d9d913512c29de5a735045fc96d79b383d63a8"
+    },
+    {
+      "source_section": "prompts/START_HERE.md",
+      "initial_destination": "prompts/START_HERE.md",
+      "section_sha256": "ed2b43b82af1d12a174b9d7a1bf1141e1474cbc6a6095ce015afeeb1931b5e08"
+    },
+    {
+      "source_section": "prompts/00_CHATGPTWORK_BOOTSTRAP.md",
+      "initial_destination": "prompts/00_CHATGPTWORK_BOOTSTRAP.md",
+      "section_sha256": "8fa4de3b4674f248f6dd7218ee818002ea29a2c6c87db8442f4efe4ae69911ef"
+    },
+    {
+      "source_section": "prompts/01_PRODUCT_MASTER.md",
+      "initial_destination": "prompts/01_PRODUCT_MASTER.md",
+      "section_sha256": "94743ecb177535a25ada183f01aea345f117c0542b8b0ef666fb4d82dd386902"
+    },
+    {
+      "source_section": "docs/FOUR_FEATURES.md",
+      "initial_destination": "docs/FOUR_FEATURES.md",
+      "section_sha256": "ada59564c93d9516abc38932152711f50f9e6444f9aa3a3c8cbf9fc2b3668379"
+    },
+    {
+      "source_section": "docs/UI_BASELINE.md",
+      "initial_destination": "docs/UI_BASELINE.md",
+      "section_sha256": "020e7889742829ce2d729a4c25fd3f5b78e1afa2004da6db6aaddfcbe6c63e0e"
+    },
+    {
+      "source_section": "docs/INTERFACES.md",
+      "initial_destination": "docs/INTERFACES.md",
+      "section_sha256": "7d6ad722179336e4d64e93a8fad87f3eb4528cb9cffa7d66b3ef0d465099829d"
+    },
+    {
+      "source_section": "docs/MODULE_BOUNDARIES.md",
+      "initial_destination": "docs/MODULE_BOUNDARIES.md",
+      "section_sha256": "c217cbfc8705f72a8e27734b4246c3e329c2d4ac1875aa555561f6477c03e496"
+    },
+    {
+      "source_section": "docs/PROJECT_PLAN.md",
+      "initial_destination": "docs/PROJECT_PLAN.md",
+      "section_sha256": "e1a9cc0070f4ef0d689a0df6b6d686324dd621650c8c5f0f6b75db48c9e57de0"
+    },
+    {
+      "source_section": "docs/TASK_ASSIGNMENT.md",
+      "initial_destination": "docs/TASK_ASSIGNMENT.md",
+      "section_sha256": "9275629a7d1ffcc880ee52f2ac28db3a7c65a6c29b289d3d418bd85ff7f6f415"
+    },
+    {
+      "source_section": "docs/DEMO_SCRIPT.md",
+      "initial_destination": "docs/DEMO_SCRIPT.md",
+      "section_sha256": "7fa164e248c258a03e74d6993fc3c62e5df2a7911ab347000cd2cb4eff82657d"
+    },
+    {
+      "source_section": "docs/ACCESS_MODEL.md",
+      "initial_destination": "docs/ACCESS_MODEL.md",
+      "section_sha256": "16d58945c168b2cfec1c0dcced47769f25517ab8883bcc9e57be3be048e62450"
+    },
+    {
+      "source_section": "prompts/members/Yu.Wei.md",
+      "initial_destination": "prompts/members/Yu.Wei.md",
+      "section_sha256": "d6710540fe8734b7c9d2ceb9063fbf902b421f8be73a043c1f816994e3a6ce46"
+    },
+    {
+      "source_section": "prompts/members/Zaixuan.Ji.md",
+      "initial_destination": "prompts/members/Zaixuan.Ji.md",
+      "section_sha256": "e2476642c99fb45cc931afd4460c5b08ebd2300462dd350708d9b8f049dba1b3"
+    },
+    {
+      "source_section": "prompts/members/Xiangze.Zhu.md",
+      "initial_destination": "prompts/members/Xiangze.Zhu.md",
+      "section_sha256": "838cf398555bcb2f3ffe6a5026064adb5486e6820c35b467d00147d599c3501f"
+    },
+    {
+      "source_section": "prompts/members/Tianqi.Hao.md",
+      "initial_destination": "prompts/members/Tianqi.Hao.md",
+      "section_sha256": "b80f4e7f2888ede4c425e4a3d42343804eebec1e8ef264d8e1e06f92cdf1129e"
+    },
+    {
+      "source_section": "prompts/members/Yifan.Mao.md",
+      "initial_destination": "prompts/members/Yifan.Mao.md",
+      "section_sha256": "02f0b2a6b51ba4371bc53e0ca816cef7535cb6f79c7053f276e0173ef3855e05"
+    },
+    {
+      "source_section": "prompts/members/Guanjie.Xue.md",
+      "initial_destination": "prompts/members/Guanjie.Xue.md",
+      "section_sha256": "fca7f699660d3015ccc05110a0ba6abeafafacdd6c595effb3f4f6a7da482ee6"
+    },
+    {
+      "source_section": "prompts/members/Yuntao.Min.md",
+      "initial_destination": "prompts/members/Yuntao.Min.md",
+      "section_sha256": "8ec17426341b0bbc52f66796d6d421f00679e29877316f43a45c4f2a5200e70b"
+    },
+    {
+      "source_section": "prompts/runtime/PRE_PLAN.md",
+      "initial_destination": "prompts/runtime/PRE_PLAN.md",
+      "section_sha256": "fe45b2f29cc4ef8fb89f3ea916549e5e9ec43a5b6f53e2e6610856884c8005b6"
+    },
+    {
+      "source_section": "prompts/runtime/REPORT.md",
+      "initial_destination": "prompts/runtime/REPORT.md",
+      "section_sha256": "361b319de7f6872854dfc04c238f3683681226759ba2e77f88678e35c1b009ca"
+    },
+    {
+      "source_section": "prompts/runtime/TUTOR.md",
+      "initial_destination": "prompts/runtime/TUTOR.md",
+      "section_sha256": "074a93ed3012c370f0c1369c4b66963588cee4009cbbe0894df9217c4c941863"
+    },
+    {
+      "source_section": "prompts/runtime/LEARNING_FEEDBACK.md",
+      "initial_destination": "prompts/runtime/LEARNING_FEEDBACK.md",
+      "section_sha256": "f0c86e77f5149e1d2e02773ec97b71bcf41419423f09d0ead618267fd49d17bb"
+    },
+    {
+      "source_section": "templates/MEMBER_PLAN.md",
+      "initial_destination": "templates/MEMBER_PLAN.md",
+      "section_sha256": "8479935b8a9f413d592ce2478ce3e1509272ecd6ac699db8c5b3bf82c0b75387"
+    },
+    {
+      "source_section": "templates/RESEARCH_TEST_PLAN.md",
+      "initial_destination": "templates/RESEARCH_TEST_PLAN.md",
+      "section_sha256": "7fda0692382b4387df262a71ef7442c446642439dfdc2e238aeaf89e748af794"
+    },
+    {
+      "source_section": "templates/DELIVERY.md",
+      "initial_destination": "templates/DELIVERY.md",
+      "section_sha256": "a04e6275459c0756f67eddad9d40c8ad0a0e6015fe3002073e48915e056ce821"
+    },
+    {
+      "source_section": "templates/RESEARCH_TEST_DELIVERY.md",
+      "initial_destination": "templates/RESEARCH_TEST_DELIVERY.md",
+      "section_sha256": "741d6c80bb27b0129e8b8d9c8b019679fe27dbad0fb71bdd6e6c9b0693edc11b"
+    },
+    {
+      "source_section": "templates/SOURCE_CARD.md",
+      "initial_destination": "templates/SOURCE_CARD.md",
+      "section_sha256": "6af9e132978f927ee0a34d832b87e3ee13ab065402642bff6f27a6afbb1fc1c8"
+    },
+    {
+      "source_section": "templates/USER_TEST_RECORD.md",
+      "initial_destination": "templates/USER_TEST_RECORD.md",
+      "section_sha256": "d680682deee2003d09f51d203bc5a212b7b840fdc4837096ce49c729d27a2812"
+    },
+    {
+      "source_section": "templates/JOIN_REQUEST.md",
+      "initial_destination": "templates/JOIN_REQUEST.md",
+      "section_sha256": "986ed0abbdf2c7e8555200615bf26ede290b0e2842e150a81d91f4f0f2302c2c"
+    },
+    {
+      "source_section": "templates/MEMBER_ROSTER.example.json",
+      "initial_destination": "templates/MEMBER_ROSTER.example.json",
+      "section_sha256": "a8085f9cf5221c86913ef26faa6743de1cd6b97e7961c5c19617f701705c144d"
+    },
+    {
+      "source_section": "templates/DEMO_EVIDENCE.md",
+      "initial_destination": "templates/DEMO_EVIDENCE.md",
+      "section_sha256": "6873240a4e759caac6b3b7be963db06260f0b40afc14e112ebbbcb1e07d9293f"
+    },
+    {
+      "source_section": "requirements/four_features.json",
+      "initial_destination": "requirements/four_features.json",
+      "section_sha256": "504db0565bc34491f59d33d36f19aa2be8a10bd2443152e861e2b95299bdc517"
+    },
+    {
+      "source_section": "docs/SOURCES.md",
+      "initial_destination": "docs/SOURCES.md",
+      "section_sha256": "f96bf53b395c134df7e167363f9e8f7c88058a74fc5b04fa19bf92fe08553f07"
+    },
+    {
+      "source_section": "docs/INPUT_IDENTITIES.json",
+      "initial_destination": "docs/INPUT_IDENTITIES.json",
+      "section_sha256": "5a4e37d8c32cf5957bd20bad69afc74b13c708be0988b589ad3c00d2b9b97155"
+    }
+  ],
+  "note": "Original sections are preserved in R3_SOURCE.md. Live roster/status/access documents are adapted to actual execution; section hashes describe the input, not future files."
+}

@@ -1,3 +1,3 @@
-# 中美市场差异及金融学习资料、真人测试与问题记录
+# 历史初始化入口
 
-负责人：Yuntao.Min。此处当前只有目录边界说明；实际内容提交依赖身份核实和 PLAN 批准。只提交获准公开且有来源的内容；不预填实验或真人测试结果。
+R3 当前真人测试/问题记录使用 testing/observations/yuntao-min/，资料使用 research/submissions/yuntao-min/。成员无需写代码或使用 Git；此旧目录没有真实成果。

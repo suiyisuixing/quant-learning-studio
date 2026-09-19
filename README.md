@@ -1,46 +1,50 @@
-# Quant Learning Studio / QuantLab
+# QuantLab · quant-learning-studio
 
-面向学生的独立金融学习网站：使用虚拟资金、获准数据或明确标记的教学样本，学习中美量化方法、风险、费用和资料证据。
+面向金融入门者与策略练习者，沿用中美量化比较方向，使用用户认可的独立网站设计。
 
-**状态：协作初始化；认可的网站源码及完整启动提示词尚待提供。没有部署公网网站，尚无可运行产品。**
+**F1 市场数据的显示 → F2 演练前 AI 策划和分析 → 用户确认 → F3 模拟经营沙盘 → F4 演练后问题分析与复盘。**
 
-- 主仓库 owner / 最终合并人：Yu.Wei，GitHub `@suiyisuixing`。
-- 其他六位成员使用自己的 Fork 提交 PR；不授予主仓库 Write、Maintain 或 Admin。
-- 身份核实 → 登记角色 → 本人填写 PLAN → Yu 确认具体范围 → 实施 → 检查 → Yu 审阅并合并。
-- 原前端设计和框架必须保留；不得使用旧 ai-workbench 或过时 starter。
+已按白名单导入哈希一致的认可独立网站源码，应用与 UI 文件逐字节保留。现有 0.2.0 基线提供账户、合成样本回测、规则讲解、学习与报告；**它尚未实现并通过 R3 的 F1–F4 完整链路**。R3 更新通过独立 PR 交 Yu 最终合并；分支中的配置不能冒充 main 已激活。
 
 ## 开始协作
+- [启动入口](prompts/START_HERE.md) · [完整 Bootstrap](prompts/00_CHATGPTWORK_BOOTSTRAP.md) · [产品总要求](prompts/01_PRODUCT_MASTER.md)
+- [七人名册](docs/TEAM_ROSTER.md) · [七个角色与首批任务](docs/TASKS.md) · [完整阶段计划](docs/PROJECT_PLAN.md)
+- [加入 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1) · [实际访问模型](docs/ACCESS_MODEL.md) · [模块边界](docs/MODULE_BOUNDARIES.md)
+- [七份个人提示词](prompts/members/) · [四份网站 AI 提示词](prompts/runtime/) · [填写模板](templates/)
+- [四项验收](docs/FOUR_FEATURES.md) · [统一接口](docs/INTERFACES.md) · [UI 基线](docs/UI_BASELINE.md) · [完整演示](docs/DEMO_SCRIPT.md)
+- [本次初始化状态](docs/INITIALIZATION_REPORT.md) · [输入来源](docs/requirements/PROVENANCE.md) · [许可状态](LICENSE_STATUS.md)
 
-1. 阅读 [完整软件要求](docs/requirements/01_PRODUCT_MASTER.md) 和 [原始职责](docs/requirements/ORIGINAL_TASKS.md)。
-2. 按 [加入方式](docs/ONBOARDING.md) 在成员加入 Issue 留下当前 GitHub 账号与角色，等待 Yu 线下核实本人身份。
-3. 阅读 [个人提示词入口](prompts/README.md)，Fork 后只修改自己的 `team/<role>/PLAN.md`，提交计划 PR。
-4. Yu 将核实后的数字 GitHub ID、具体路径范围和已批准 PLAN 的 Git blob SHA 登记在主分支规则中，之后才能提交实施 PR。
+开发者仅 Yu、Zaixuan、Xiangze、Tianqi：先本人 PLAN，范围确认后从 Fork/任务分支提 PR，Yu 最终合并。三位资料成员 Yifan、Guanjie、Yuntao 不写代码，不要求 Fork；按批次交资料、真人测试和复测记录，由开发者保留原作者代录。
 
-## 计划与规则
-
-- [项目完整计划](docs/PROJECT_PLAN.md)
-- [七人任务 Issue](docs/TASKS.md) 与 [成员加入 Issue](https://github.com/suiyisuixing/quant-learning-studio/issues/1)
-- [模块边界](docs/MODULE_BOUNDARIES.md)
-- [协作权限与 main 保护](docs/PERMISSIONS.md)
-- [共同接口草案](contracts/README.md)
-- [填写模板](templates/README.md)
-- [验收状态](docs/ACCEPTANCE.md)
-- [输入来源与缺口](docs/requirements/PROVENANCE.md)
-
-## 当前可运行检查
-
-仅协作基础使用 Python 标准库，不替应用选择框架：
-
+## 当前可运行的检查
+治理检查需要 Python 3.11+，使用标准库：
 ```sh
 python3 -m unittest discover -s tests/governance -v
 python3 scripts/check_repository.py
 python3 scripts/publication_scan.py --history HEAD
 ```
+这些检查只验证协作规则、输入清单和公开扫描，不能证明网站、真实 DeepSeek 或真人测试已通过。网站的实际启动方法见下方；初始化没有为成员实现 R3 新功能。
 
-应用安装、启动和测试命令：等待认可源码后按真实项目填写，不推测。
+公开仓库不等于公开部署。没有购买服务、调用付费 API、启用 Pages 或发送协作者邀请。CODEOWNERS 用于审查，不是文件夹权限。历史来源保留在 docs/history，活跃安排以 R3 为准。
 
-## 数据与费用
+## 本地运行网站
 
-不连接券商、不处理真实资金、不承诺收益。DeepSeek 仅计划从后端接入；初始化无真实 API 调用。未获授权不使用付费服务。受限全文、提取片段、向量索引、数据库、密钥、真实用户身份和私人日志不得提交。
+技术栈保持原生 ES 模块/CSS、FastAPI、SQLite；不需要 npm、CDN 或前端构建。Python 3.11+：
+```sh
+python3 run.py
+```
+原启动器首次会在本项目创建 .venv 并安装 requirements.txt，不修改全局 Python。打开 http://127.0.0.1:8017，自行注册本地账户；数据保存在 var/qlab.db，不提交 Git。已有项目依赖环境可用：
+```sh
+.venv/bin/python run.py --use-current-env
+```
+Windows 使用 py -3 run.py 或 start.bat；本次是否实测以初始化报告为准。未提供默认管理员密码或真实 API 密钥。默认只用明确标注的合成样本、规则讲解，不冒充真实市场或 DeepSeek。
 
-公开仓库不自动授予第三方资料再分发权。当前未擅自添加开源许可证；各贡献者和第三方素材的许可需由 owner 明确确认。
+现有基线流程：注册 → 风险实验 → 三方法回测 → 规则讲解 → 反思/报告 → 概念题 → 重开记录。这不是 R3 的完整演示流程；演练前方案批准、分阶段用户操作、论文检索与操作级复盘仍是团队任务。
+
+开发检查（使用项目隔离环境，测试数据不计真人）：
+```sh
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pytest -q
+.venv/bin/python scripts/http_smoke.py
+```
+运行测试前清除真实 QLAB API 凭据，并设置 QLAB_DB 到临时隔离位置。不要对任何真实数据库测试。发布使用 [精确导入清单](docs/SOURCE_IMPORT.json)；旧包内测试证据未上传或算成本次结果。

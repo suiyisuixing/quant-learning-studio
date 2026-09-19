@@ -5,6 +5,7 @@ This is a bounded pattern/file-policy check, not a guarantee of legal permission
 or absence of all personal data. Human review of imported source is still needed.
 """
 import argparse
+import hashlib
 import re
 import subprocess
 import sys
@@ -12,6 +13,12 @@ from pathlib import Path
 
 FORBIDDEN_SUFFIXES = {'.pdf','.docx','.db','.sqlite','.sqlite3','.pem','.key','.p12','.pfx','.log','.csv','.parquet','.faiss','.index','.npy','.npz','.zip'}
 FORBIDDEN_PARTS = {'node_modules','.venv','venv','__pycache__','private','local','uploads','recordings'}
+# Exact reviewed, generated educational fixtures from the approved source archive.
+# Any change to their bytes requires a new owner review, not a broad CSV exception.
+SAFE_SYNTHETIC = {
+    'examples/cn-synthetic.csv':'f8c01515015b4c76e5a9417b2f354a001c0f7c9a0808b08b8f754927891f42b8',
+    'examples/us-synthetic.csv':'e18c86983e15f03b2d847d207fbd5040ecd9ef4385dac2ffdb9bfc3660a39bc1',
+}
 PATTERNS = [
     ('private key',re.compile(rb'-----BEGIN (?:[A-Z ]+ )?PRIVATE KEY-----')),
     ('GitHub token',re.compile(rb'gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}')),
@@ -33,12 +40,19 @@ def scan_blob(data):
 def scan_name(name):
     p=Path(name)
     reasons=[]
-    if p.suffix.lower() in FORBIDDEN_SUFFIXES:
+    if p.suffix.lower() in FORBIDDEN_SUFFIXES and name not in SAFE_SYNTHETIC:
         reasons.append('restricted data/binary extension')
     if any(part in FORBIDDEN_PARTS for part in p.parts):
         reasons.append('private/generated directory')
     if p.name.startswith('.env') and p.name != '.env.example':
         reasons.append('environment secrets file')
+    return reasons
+
+
+def scan_content(name,data):
+    reasons=scan_blob(data)
+    if name in SAFE_SYNTHETIC and hashlib.sha256(data).hexdigest()!=SAFE_SYNTHETIC[name]:
+        reasons.append('synthetic fixture differs from exact reviewed public bytes')
     return reasons
 
 
@@ -59,7 +73,7 @@ def main():
         if not p.is_file():
             failures.append((name,'tracked file missing'))
             continue
-        failures.extend((name,r) for r in scan_blob(p.read_bytes()))
+        failures.extend((name,r) for r in scan_content(name,p.read_bytes()))
     blobs=set()
     if args.history:
         # Every commit tree is checked, including removed names and symlinks.
@@ -72,7 +86,10 @@ def main():
                 failures.extend(('history:'+name,r) for r in scan_name(name))
                 if mode not in ('100644','100755'):
                     failures.append(('history:'+name,'non-regular file mode'))
-                if kind == 'blob': blobs.add(oid)
+                if kind == 'blob':
+                    blobs.add(oid)
+                    if name in SAFE_SYNTHETIC:
+                        failures.extend(('history:'+name,r) for r in scan_content(name,git('cat-file','blob',oid)))
         for oid in blobs:
             failures.extend(('historical-blob:'+oid,r) for r in scan_blob(git('cat-file','blob',oid)))
     for path,reason in sorted(set(failures)):

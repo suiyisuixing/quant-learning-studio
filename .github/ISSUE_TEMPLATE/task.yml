@@ -1,16 +1,18 @@
-name: Scoped task
-description: Define a task without self-granting implementation permission
-title: "[TASK] <role> / <task>"
+name: F1—F4 功能任务
+description: 实际模块任务与验收，不预填成果
+title: "[TASK] 一个可验收的功能步骤"
+labels: ["type:development", "status:todo"]
 body:
-  - type: textarea
-    id: task
+  - type: dropdown
+    id: feature
     attributes:
-      label: Goal, inputs, outputs, dependencies and proposed paths
+      label: 功能
+      options: [F1 市场数据显示, F2 演练前策划, F3 虚拟沙盘, F4 问题复盘, 支撑能力与公共接口]
     validations:
       required: true
   - type: textarea
-    id: acceptance
+    id: task
     attributes:
-      label: Tests, deliverables and acceptance evidence
+      label: 主责人、批准计划、输入输出、依赖、文件路径与验收
     validations:
       required: true

@@ -38,3 +38,12 @@ coverage/
 dist/
 build/
 .DS_Store
+
+# Explicitly reviewed synthetic fixtures; never blanket-allow market CSV
+!examples/cn-synthetic.csv
+!examples/us-synthetic.csv
+var/
+/evidence/*.json
+/evidence/*.png
+/evidence/*.xml
+/evidence/*.log

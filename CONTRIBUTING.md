@@ -1,21 +1,11 @@
-# Contribution workflow
+# 参与项目
 
-1. Read the product master and your role prompt.
-2. Join through the membership Issue. A public comment proves control of an account, not the student's real identity; Yu verifies that separately and records the numeric GitHub ID. Unknown accounts remain PENDING.
-3. Fork the repository into your own account, create a branch and fill `team/<role>/PLAN.md`. Open a plan-only PR, linking your role Issue.
-4. Yu reviews the plan and merges it. In a separate owner-controlled change, Yu records its current Git blob SHA and approved implementation paths in `.github/team-policy.json`. A workflow or plan's self-declared approval is not trusted.
-5. Synchronize your Fork. Implement only approved files. A plan revision is a new plan-only PR followed by fresh approval.
-6. Include actual test results and limitations in your PR. Do not submit an unredacted user record or restricted source.
-7. The trusted scope status must pass. Yu reviews and manually merges; members never merge into the main repository.
+先看 [名册](docs/TEAM_ROSTER.md) 和 [加入 Issue](https://github.com/suiyisuixing/quant-learning-studio/issues/1)。开发者使用自己的 Fork；不要申请上游写权限。Yu 使用 owner 任务分支并最终审查合并。
 
-## Shared-file changes
+开发顺序：填写本人 plans/<role>/PLAN.md → PLAN-only PR → Yu 合并并记录 PLAN blob SHA/获准路径 → 模块 PR → 检查、人工审阅、Yu 合并。应用路径依赖认可源码；当前没有产品实施批准。共享接口用 [接口需求模板](templates/INTERFACE_REQUEST.md) 协调，不在成员 PR 改权限表。
 
-Use the interface request template. Yu coordinates shared contracts and integration. Request a narrowly scoped owner-recorded exception only when necessary; never edit ownership policy from a member PR.
+Yifan、Guanjie、Yuntao 使用 [资料/真人测试计划](templates/RESEARCH_TEST_PLAN.md) 与 [交付记录](templates/RESEARCH_TEST_DELIVERY.md)，交文件或可选 Issue 即可，不要求注册 GitHub 或提交 PR。没有建立表单。开发者核查、匿名化、保留作者后代录；安全问题受限交 Yu，不公开利用细节。
 
-## Fork CI
+提交前检查当前 diff 和历史、真实测试及资料许可。不要提交数据库、受限全文、个人身份或付费凭据。代码测试在 GitHub 托管临时 runner 使用只读 token；可信范围门禁只处理元数据，不执行 PR 代码。
 
-Contributor code is built only in a separate unprivileged `pull_request` workflow with read-only token, no secrets, no environment credentials and no self-hosted runner. First-time contributor workflows may wait for owner approval. The trusted scope workflow uses only default-branch code and inspects PR metadata/data; it never imports or executes PR code.
-
-## No self-review deadlock
-
-Native protection requires a PR and successful checks, but does not require an approving review from the author. Only Yu has repository write/admin rights and therefore only Yu can merge. CODEOWNERS routes review to Yu; it is not a filesystem ACL. Product PRs remain for Yu's final decision.
+范围通过不代表代码安全或产品验收。具体配置与 owner 合并安排见 [访问模型](docs/ACCESS_MODEL.md)。
