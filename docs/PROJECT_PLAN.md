@@ -61,6 +61,8 @@ GitHub账号映射按TEAM_ROSTER登记。两个已给账号不重复询问；未
 
 完整实际任务见 [TASKS.md](TASKS.md)。日期由成员根据十周总周期排期，未给定的截止日期不猜。
 
+Yu.Wei 的 [十周个人执行计划](../plans/yu-wei/PLAN.md)已按本轮授权编制，覆盖数据、批准校验、沙盘与整合的四批提交、精确拟改路径、交接和验收；[接口提案](../plans/yu-wei/INTERFACE_PROPOSAL.md)供四位开发者定稿。它不代表其他成员已提交计划、实施已批准或产品已完成。
+
 - [M0 · R3 基线、身份与本人计划](https://github.com/suiyisuixing/quant-learning-studio/milestone/1)
 - [M1 · F1 市场数据与共同接口](https://github.com/suiyisuixing/quant-learning-studio/milestone/2)
 - [M2 · F2 演练前 AI 策划](https://github.com/suiyisuixing/quant-learning-studio/milestone/3)

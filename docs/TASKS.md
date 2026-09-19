@@ -4,7 +4,7 @@
 
 |成员|当前工作|任务|
 |---|---|---|
-|Yu.Wei|开发 PLAN 与模块代码/测试|[#2](https://github.com/suiyisuixing/quant-learning-studio/issues/2)|
+|Yu.Wei|[十周开发与整合计划](../plans/yu-wei/PLAN.md)已编制；[接口提案](../plans/yu-wei/INTERFACE_PROPOSAL.md)待四方核对，产品实施未开始|[#2](https://github.com/suiyisuixing/quant-learning-studio/issues/2)|
 |Zaixuan.Ji|开发 PLAN 与模块代码/测试|[#3](https://github.com/suiyisuixing/quant-learning-studio/issues/3)|
 |Xiangze.Zhu|开发 PLAN 与模块代码/测试|[#4](https://github.com/suiyisuixing/quant-learning-studio/issues/4)|
 |Tianqi.Hao|开发 PLAN 与模块代码/测试|[#5](https://github.com/suiyisuixing/quant-learning-studio/issues/5)|
