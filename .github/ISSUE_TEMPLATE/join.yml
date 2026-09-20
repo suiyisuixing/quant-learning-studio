@@ -1,23 +1,28 @@
-name: Member onboarding
-description: Request verified identity and role registration; no repository write access
-title: "[JOIN] <role> / <GitHub login>"
+name: 开发身份确认（R3）
+description: 仅开发成员；资料与真人测试成员可直接交文件或 Issue
+title: "[JOIN] 本人开发身份确认"
+labels: ["type:governance", "status:todo"]
 body:
-  - type: input
+  - type: markdown
+    attributes:
+      value: "已知映射：Zaixuan=3165349449-tech；Xiangze=trave1er999；Tianqi=tianqih649-glitch。不要提交密码、令牌、学号或私人邮箱。此表不授予上游写权。"
+  - type: dropdown
     id: role
     attributes:
-      label: Role from ORIGINAL_TASKS.md
+      label: 开发角色
+      options: [Yu.Wei, Zaixuan.Ji, Xiangze.Zhu, Tianqi.Hao]
     validations:
       required: true
   - type: input
-    id: account
+    id: login
     attributes:
-      label: GitHub login (post from this account)
+      label: 本人控制的确切 GitHub login
     validations:
       required: true
   - type: textarea
-    id: confirmation
+    id: acknowledgement
     attributes:
-      label: Confirm Fork and PLAN-first workflow
-      description: Do not post student numbers, email addresses, identity documents or private contact information. Yu verifies your real identity through an existing private channel.
+      label: 本人确认与已阅读内容
+      description: 确认本人控制该账号、已读提示词，理解先 PLAN、Fork PR、Yu 最终合并。
     validations:
       required: true

@@ -1,0 +1,18 @@
+name: 本人开发计划（R3）
+description: 四位开发者先提交可复查的 PLAN，范围批准前不实施
+title: "[PLAN] 本人范围与依赖"
+labels: ["type:development", "status:todo"]
+body:
+  - type: input
+    id: role
+    attributes:
+      label: 角色任务 Issue 与本人姓名
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: PLAN 文件或 PR、步骤、输入输出、依赖、拟改路径、测试和交付
+      description: 使用 templates/MEMBER_PLAN.md 覆盖本人全部任务，按依赖而非周次；已批准后连续实施。三名开发组员账号已登记，使用本人账号；身份核实不替代精确范围批准。
+    validations:
+      required: true

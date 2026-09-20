@@ -1,21 +1,7 @@
-# 提示词入口
+# 当前提示词入口 · R3
 
-[Bootstrap](00_CHATGPTWORK_BOOTSTRAP.md) 的来源和缺项已在文件开头明确。先读 [产品总要求](../docs/requirements/01_PRODUCT_MASTER.md)。
+从 [START_HERE.md](START_HERE.md) 选择本人完整提示词，按 [EXECUTE_TO_COMPLETION.md](EXECUTE_TO_COMPLETION.md) 一次领取全部任务，连续完成本人范围内的实现/资料、验证和交接，不按周安排，不止于首个模块。
 
-## 七份个人提示词
+[01_PRODUCT_MASTER.md](01_PRODUCT_MASTER.md) 是统一产品要求；members/ 恰好七份个人提示词；runtime/ 恰好四份网站 AI 提示词，真实模型验证仍未完成。四名开发者保持首次精确范围确认和 Fork/PR，Yu 最终合并；三位资料测试成员无需开发环境或 GitHub。
 
-- [Yu.Wei](members/01_YU_WEI.md)
-- [Zaixuan.Ji](members/02_ZAIXUAN_JI.md)
-- [Xingze.Zhu](members/03_XINGZE_ZHU.md)
-- [Tianqi.Hao](members/04_TIANQI_HAO.md)
-- [Yifan.Mao](members/05_YIFAN_MAO.md)
-- [Guanjie.Xue](members/06_GUANJIE_XUE.md)
-- [Yuntao.Min](members/07_YUNTAO_MIN.md)
-
-## 三份网站 AI 提示词
-
-- [01_APPROVED_FRONTEND_ACCOUNTS_KB.md](website/01_APPROVED_FRONTEND_ACCOUNTS_KB.md)
-- [02_QUANT_ENGINE_AND_INTEGRATION.md](website/02_QUANT_ENGINE_AND_INTEGRATION.md)
-- [03_RETRIEVAL_DEEPSEEK_LEARNING.md](website/03_RETRIEVAL_DEEPSEEK_LEARNING.md)
-
-网站提示词只供各负责人完成获批范围，不能一次包办七人的产品。
+[00_CHATGPTWORK_BOOTSTRAP.md](00_CHATGPTWORK_BOOTSTRAP.md) 仅供 owner 初始化/协作治理。旧生成版在 docs/history/pre-r3，原始 R3 与提取清单在 docs/prompt-pack，作为历史来源保留，不覆盖用户最新执行安排。

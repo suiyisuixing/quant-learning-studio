@@ -1,20 +1,18 @@
-## Task and role
-- Role Issue:
-- Registered role:
-- PR type: PLAN_ONLY / IMPLEMENTATION / OWNER_INTEGRATION
-- Approved PLAN blob SHA (implementation only):
+## 问题与改动
+关联角色/功能 Issue、本人 PLAN 和 Yu 的范围批准：
+具体行为及改动路径：
 
-## Changes
-- Files and why:
-- Inputs / outputs / dependencies:
+## 实际验证
+当前 commit、真实运行的检查和结果：
+未运行/失败/阻塞：
+UI 是否与认可基线一致（需要时提供真实证据）：
 
-## Actual verification
-- Commands and results:
-- Current commit:
-- Not run and why:
-- No paid calls / no deployment / public data review:
+## 输入与公开范围
+来源许可、无密钥/数据库/受限全文/私人日志/真实测试身份：
+公共接口或共享文件是否由 Yu 接手：
 
-## Review
-- Shared interface request (if any):
-- Known limitations:
-- Yu.Wei's final review and manual merge required.
+## 资料代录（仅涉及资料时）
+原作者、实际收件时间、代录者、许可/隐私核查及任务/版本：
+不把代录 git 作者伪造为资料成员。
+
+只有 Yu 最终审查合并；范围检查不等于代码/语义/真实 API 验收。

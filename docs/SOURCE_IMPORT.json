@@ -1,0 +1,241 @@
+{
+  "source_archive": "QuantLab_独立网站_源码与设计.zip",
+  "archive_sha256": "312ebb483389effa68403610f082f8f720dfc342b7adb031fb0add95cec7c6fd",
+  "archive_hash_matches_R3": true,
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "a51ba1192290edbd3876d699c73ca287d074a3b514da7695ace1698261d6a9e7",
+      "bytes": 495,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "7682521344ef6581cc733937118333ff5395545e58d1e06379245bd47fc91d0c",
+      "bytes": 1749,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "design/DESIGN_BRIEF.md",
+      "sha256": "3fa84c850cf5766d737709ee2c1a797c7417d15e8d6e51afc49536c6243771e3",
+      "bytes": 4032,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "app/__init__.py",
+      "sha256": "5e4602c2f1e3da12ce6c4aa3c3b8381af96b075cf951d13e342f5674228342f6",
+      "bytes": 59,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "app/content.py",
+      "sha256": "57deb5ca37a8fc1ccae1e89af42547f5a76bd97229907f7250fae73e7abf5a8d",
+      "bytes": 4314,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "app/engine.py",
+      "sha256": "507f89bec6388b2ee8c1359993c614400fd02857a8f535bfaf959d24766bda9f",
+      "bytes": 12568,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "app/main.py",
+      "sha256": "674991ef95487abec94c349896dcf9dc456e7a2396afa8ab58e352ebe7fdffc0",
+      "bytes": 27110,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "5f775bcba0f3cac02f42ff9a572e33d2910b16d88e0267005f2f6e4a349cf7f4",
+      "bytes": 60071,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "web/style.css",
+      "sha256": "964c27c14430043e7ae47cb8b1c0d7a864cad9ba1ff152dff431d96d2557dcfa",
+      "bytes": 22987,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "d38d8d41a76a632d345c297dcadd57e3b7b9e580cb908975596ee52c246fe9dc",
+      "bytes": 1254,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "web/favicon.svg",
+      "sha256": "8ad109a8bbff1fef483f907d1025068164a29bf064e180e3e39234c8c0003e05",
+      "bytes": 281,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "run.py",
+      "sha256": "39063ef46ce0de92ffc0c23b7e7bd064e9a747ecd63b1cfd7ddaed8ccb434c32",
+      "bytes": 2917,
+      "mode": "0o755",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "start.bat",
+      "sha256": "b624425e083c5576c91ad0628de587fbd6d9a0d213c9ccc7a0437981f1858f1f",
+      "bytes": 43,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "start.command",
+      "sha256": "35f79d23020b41df3f2e93c1b5c93f600d561ec19867d97bb89a966c5c1f7a2f",
+      "bytes": 48,
+      "mode": "0o755",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "50045524c3d8b81d347dead5a6bb6df283d8600841c551ffe8a6237d2736b126",
+      "bytes": 84,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "5251456eaba83b1e7cca8ba99b8255ad7b2aa8a42764e1cac64876b329057adf",
+      "bytes": 53,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "6c6ccf864e8f2d2e0223ee8e39bfde660c12435aa37d81e2b14000a6bee15003",
+      "bytes": 42,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "tests/test_product.py",
+      "sha256": "f3335976213bd4a76f24c3b330cab97c268dd8a71ddd48ae504f1283c5a91d86",
+      "bytes": 17795,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "scripts/http_smoke.py",
+      "sha256": "a3b1be49c500ec781476275c979b1bc59af8525f8abb2ebcd953b6095798a2d0",
+      "bytes": 2564,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "scripts/browser_network_test.py",
+      "sha256": "71f2a131d7d52008c2ff72cf71a202a6671e0e7856e00074feb6eb307084fc30",
+      "bytes": 7834,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "scripts/browser_test.py",
+      "sha256": "35e61b5a727329950ca70b0be40be34b6713a21fccee34bddf5ada9328749c1c",
+      "bytes": 9084,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "78028adefb176a261147057c591f1c7f6a55539c4d65b3010338fd6646595a1f",
+      "bytes": 215,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "examples/cn-synthetic.csv",
+      "sha256": "f8c01515015b4c76e5a9417b2f354a001c0f7c9a0808b08b8f754927891f42b8",
+      "bytes": 50515,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "examples/us-synthetic.csv",
+      "sha256": "e18c86983e15f03b2d847d207fbd5040ecd9ef4385dac2ffdb9bfc3660a39bc1",
+      "bytes": 50408,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "docs/MODEL.md",
+      "sha256": "3af621110e5c533fd1858e3ecc88ead5f525142af966e0c9b13cfff88fec96cc",
+      "bytes": 2947,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "sha256": "6bd41b81b573b68afebf063b0bcbe2a38d9ed85201d1051dd8bd947ca97377c2",
+      "bytes": 3017,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "docs/COURSE_REQUIREMENTS.md",
+      "sha256": "c2c29ede2fdb42135ef03db55d4722ee77b95d771f96e1cfcf666559137e8c61",
+      "bytes": 2053,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "docs/COURSE_EVIDENCE_TEMPLATE.md",
+      "sha256": "7d8c1f427c029f7c8c1443c5b8d58b28e08b0dbd8a61c341c25dd7c53d12d955",
+      "bytes": 1199,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    },
+    {
+      "path": "docs/AI_DISCLOSURE.md",
+      "sha256": "601ce9ed0b96af58d829b9e586088744e19bc5c3bf7b2bb35d936b2350ac6340",
+      "bytes": 897,
+      "mode": "0o644",
+      "import": "BYTE_FOR_BYTE"
+    }
+  ],
+  "excluded": [
+    ".gitignore",
+    "evidence/pytest.log",
+    "evidence/http-results.json",
+    "evidence/browser-network-blocked.log",
+    "evidence/browser.log",
+    "evidence/mobile-data.png",
+    "evidence/desktop-reports.png",
+    "evidence/desktop-results.png",
+    "evidence/desktop-lab.png",
+    "evidence/mobile-results.png",
+    "evidence/pytest-collection-failure.log",
+    "evidence/desktop-learning.png",
+    "evidence/desktop-data.png",
+    "evidence/desktop-tutor.png",
+    "evidence/desktop-feedback.png",
+    "evidence/VERIFICATION.md",
+    "evidence/http.log",
+    "evidence/mobile-tutor.png",
+    "evidence/browser-results.json",
+    "evidence/desktop-home.png",
+    "evidence/pytest.xml",
+    "evidence/mobile-home.png",
+    "evidence/desktop-compare.png",
+    "evidence/mobile-lab.png",
+    "evidence/desktop-welcome.png",
+    ".github/pull_request_template.md",
+    ".github/workflows/tests.yml",
+    ".github/ISSUE_TEMPLATE/task.md"
+  ],
+  "note": "Source code, UI, requirements and supplied tests imported byte-for-byte. Prior logs/screenshots/test results and conflicting old GitHub rules are excluded. Original non-active prose is retained in docs/source-baseline."
+}

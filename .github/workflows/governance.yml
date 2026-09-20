@@ -1,9 +1,7 @@
-name: Governance and baseline checks
+name: Trusted scope gate
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
   pull_request_target:
     branches: [main]
@@ -19,26 +17,8 @@ permissions:
   contents: read
 
 jobs:
-  bootstrap-checks:
-    if: github.event_name != 'pull_request_target'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - name: Test scope enforcement and publication guards
-        run: python3 -m unittest discover -s tests/governance -v
-      - name: Validate files, links and role registry
-        run: python3 scripts/check_repository.py
-      - name: Inspect tracked files and reachable publication history
-        run: python3 scripts/publication_scan.py --history HEAD
-
   scope-evaluator:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

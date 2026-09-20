@@ -1,15 +1,19 @@
-# 输入来源与当前边界
+# 输入来源与版本覆盖
 
-已读取：用户本次明确要求、01_PRODUCT_MASTER.md、原始《任务.docx》。
+已实际读取 R3 原件、01_PRODUCT_MASTER.md、任务.docx 正文和 week2.docx 正文。文件 hash 见 docs/INPUT_IDENTITIES.json。原始 Office 文件及隐藏属性不公开。
 
-产品总要求 SHA-256：`088e1c65d302068d2d76490538cd2ee4b664cb682871f337295e9ee355d4cdbd`。
+R3 全文保存在 docs/prompt-pack/R3_SOURCE.md；共 37 个文件节已提取，JSON 去除了 Markdown 围栏。docs/prompt-pack/README.md 是提示词包说明，没有覆盖软件根 README。执行后的名册/权限/状态文档采用实际证据；来源节 hash 不冒充修改后 hash。
 
-尚未收到 / 定位：
-- 《QuantLab_公开GitHub_完整提示词.md》及其中原始 `prompts/00_CHATGPTWORK_BOOTSTRAP.md`。
-- 用户已经认可前端设计的独立网站源码。
+活跃人员安排为四开发三非开发；活跃产品要求为 prompts/01_PRODUCT_MASTER.md 与 docs/FOUR_FEATURES.md。原始 01_PRODUCT_MASTER.md 保留在 docs/history/pre-r3/docs/requirements，旧七功能表不再是活跃验收主线。原七人任务文字保留来源价值，其中旧姓名 Xingze 对应当前 Xiangze，非新增成员。
 
-因此本仓库初始化文档、七份个人提示词和三份网站 AI 提示词，均为依据已收到材料及当前明确要求生成的协作文件，**不是对缺失附件的逐字复制，也不代表已执行其未读取内容**。收到原件后必须逐项核对。
+week2 正文包含四项功能、Web 方向和论文支撑；它是团队记录，不当作导师已批准或学校新政策。R3 中的源码 hash 已由实物复核；独立预览 hash 尚未实物复核，随后收到源码 zip 并核对 hash 一致，已按 SOURCE_IMPORT.json 导入。
 
-应用框架、应用源码的真实路径、运行命令、现有功能和历史测试结果均不能从旧项目推断。源码导入前应用验证状态为 `BLOCKED_MISSING_APPROVED_SOURCE`。不得用旧 ai-workbench 或 starter 补位。
+R3 的人员与提示词迁移沿同一 Git 历史增量更新；基线为 `57cf025d0a06aff2a936b628b784c8d4975e368f`，没有删除有效产品代码或改写成员贡献。
 
-目前仅建立协作基础；产品 F01–F07 的实现、真实 API 调用和真人测试均未完成。公开代码不等于网站上线。
+## 2026-09-20 身份补充
+
+用户提供 Tianqi.Hao 的确切账号 tianqih649-glitch，并授权邀请成员参与制作。已使用 GitHub users API 核对 login 与不可变 ID 278631005；映射来自用户，不从同名账号猜测。本人参与确认仍待本人在角色 Issue 回复。参与邀请走角色 Issue @mention，不授予上游写权限；原始提示词包保留编写时点的未知状态，当前名册以 docs/TEAM_ROSTER.md 为准。
+
+## 当前执行方式补充
+
+用户最新指示取消按周安排，要求将本人全部任务一次给齐，让每位成员跟随完整提示词完成。活跃入口为 prompts/START_HERE.md、prompts/EXECUTE_TO_COMPLETION.md 和七份 members 提示词；Yu 的 PLAN 已去掉周次/工时排期。原始附件与过去提交保留为来源，不覆盖这项最新安排。此变更不改变四开发三资料测试、原 UI、首次精确范围批准、公开内容边界或 Yu 的最终合并权。

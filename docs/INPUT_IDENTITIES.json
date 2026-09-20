@@ -1,0 +1,44 @@
+{
+  "revision": "R3_EXECUTION",
+  "verified_local_inputs": [
+    {
+      "name": "QuantLab_公开GitHub_完整提示词_R3_四开发三资料测试.md",
+      "bytes": 148635,
+      "sha256": "fc4bcd3d6cb1474e362b114e0c3a0e62059761015c39df7123fed3f1a265a22c",
+      "read_in_execution": true,
+      "raw_office_file_published": false
+    },
+    {
+      "name": "01_PRODUCT_MASTER.md",
+      "bytes": 10132,
+      "sha256": "088e1c65d302068d2d76490538cd2ee4b664cb682871f337295e9ee355d4cdbd",
+      "read_in_execution": true,
+      "raw_office_file_published": false
+    },
+    {
+      "name": "任务.docx",
+      "bytes": 11130,
+      "sha256": "9b6507646e35f1897555c176f9db09da0c9370c831f4b1a0f643136c6e9371d5",
+      "read_in_execution": true,
+      "raw_office_file_published": false
+    },
+    {
+      "name": "week2.docx",
+      "bytes": 12256,
+      "sha256": "22b1146145ce51c1bb7fcb6015ea0c54821267061c5fd2e5bbb5b1f3e0c5d77a",
+      "read_in_execution": true,
+      "raw_office_file_published": false
+    },
+    {
+      "name": "QuantLab_独立网站_源码与设计.zip",
+      "bytes": 3535111,
+      "sha256": "312ebb483389effa68403610f082f8f720dfc342b7adb031fb0add95cec7c6fd",
+      "read_in_execution": true,
+      "archive_published": false
+    }
+  ],
+  "missing": [
+    "QuantLab_网站实际页面预览.png (optional, source baseline verified)"
+  ],
+  "note": "Input hashes are not remote HEAD or proof of runtime success. The R3 source package contains earlier reported R2/screenshot hashes which were not independently re-read in this execution."
+}

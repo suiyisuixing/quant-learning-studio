@@ -37,24 +37,32 @@ def user_id(value):
 
 
 def validate_policy(policy):
-    if policy.get('version') != 1:
+    if policy.get('version') != 2 or policy.get('revision') != 'R3':
         raise ScopeError('Unsupported policy version')
     owner = policy.get('owner', {})
     if not user_id(owner.get('id')) or not re.fullmatch(r'[A-Za-z0-9-]+', owner.get('login', '')):
         raise ScopeError('Invalid owner identity')
-    roles, ids, logins = set(), {owner['id']}, {owner['login'].lower()}
+    expected={'yu-wei':True,'zaixuan-ji':True,'xiangze-zhu':True,'tianqi-hao':True,
+              'yifan-mao':False,'guanjie-xue':False,'yuntao-min':False}
+    roles, ids, logins, names = set(), set(), set(), set()
     for m in policy.get('members', []):
         role = m.get('role', '')
-        if not re.fullmatch(r'[a-z]+(?:-[a-z]+)+', role) or role in roles:
+        if role not in expected or role in roles or m.get('is_developer') is not expected[role]:
             raise ScopeError('Invalid or duplicate role')
         roles.add(role)
-        if m.get('plan_path') != f'team/{role}/PLAN.md':
+        for name in [m.get('name','')]+m.get('display_name_aliases',[]):
+            if not name or name.lower() in names:
+                raise ScopeError('Duplicate display name or historical alias')
+            names.add(name.lower())
+        if m.get('plan_path') != f'plans/{role}/PLAN.md':
             raise ScopeError('Role plan path does not match')
-        if m.get('identity_status') not in ('PENDING', 'VERIFIED'):
+        if m.get('identity_status') not in ('AWAITING_LOGIN', 'GITHUB_OPTIONAL', 'VERIFIED'):
             raise ScopeError('Unknown identity status')
-        if m['identity_status'] == 'PENDING':
+        if m['identity_status'] != 'VERIFIED':
             if m.get('id') is not None or m.get('login') is not None or m.get('implementation_approval') is not None:
                 raise ScopeError('Pending identity must not have an account or approval')
+            if m.get('scope_active') or m.get('plan_scope_active'):
+                raise ScopeError('Unverified identity cannot have active scope')
         else:
             login = m.get('login', '')
             if not user_id(m.get('id')) or not re.fullmatch(r'[A-Za-z0-9-]+', login):
@@ -63,9 +71,17 @@ def validate_policy(policy):
                 raise ScopeError('Duplicate registered identity')
             ids.add(m['id'])
             logins.add(login.lower())
-        for path in m.get('module_paths', []):
+        if role=='yu-wei' and (m.get('id')!=owner['id'] or m.get('login')!=owner['login']):
+            raise ScopeError('Owner role does not match authenticated owner registry')
+        if not m['is_developer'] and (m.get('code_paths') or m.get('document_paths') or m.get('scope_active') or m.get('plan_scope_active') or m.get('implementation_approval')):
+            raise ScopeError('Research/test roles have no code or PR scope; use reviewed file/Issue handoff')
+        for key in ('scope_active','plan_scope_active'):
+            if type(m.get(key)) is not bool:
+                raise ScopeError('Scope activation must be explicit')
+        modules=m.get('code_paths',[])+m.get('document_paths',[])
+        for path in modules:
             safe_path(path, prefix=True)
-            if path.split('/')[0] in ('.github', 'scripts', 'contracts', 'team') or path.startswith('tests/governance'):
+            if path.split('/')[0] in ('.github', 'scripts', 'contracts', 'team','plans','requirements') or path.startswith('tests/governance') or path in ('app/main.py','AGENTS.md','README.md','requirements.txt','requirements-dev.txt','run.py'):
                 raise ScopeError('Member module includes protected governance/shared path')
         approval = m.get('implementation_approval')
         if approval:
@@ -77,8 +93,12 @@ def validate_policy(policy):
                 raise ScopeError('Approved paths missing')
             for path in approval['approved_paths']:
                 safe_path(path, prefix=True)
-                if not any(within(path.rstrip('/') + ('/placeholder' if path.endswith('/') else ''), module) for module in m.get('module_paths', [])):
+                if not any(within(path.rstrip('/') + ('/placeholder' if path.endswith('/') else ''), module) for module in modules):
                     raise ScopeError('Approved scope exceeds role module')
+        if m.get('scope_active') and (not approval or m.get('identity_status')!='VERIFIED'):
+            raise ScopeError('Implementation activation requires verified identity and exact PLAN approval')
+    if roles != set(expected):
+        raise ScopeError('R3 requires exactly seven roles and four developers')
     return policy
 
 
@@ -109,10 +129,14 @@ def evaluate(policy, author, files, expected_count, current_plan_sha=None):
     member = next((m for m in policy['members'] if m.get('identity_status') == 'VERIFIED' and m.get('id') == author.get('id') and m.get('login', '').lower() == author.get('login', '').lower()), None)
     if member is None:
         raise ScopeError('Author is not a verified registered member')
+    if not member['is_developer']:
+        raise ScopeError('Non-developer delivery uses reviewed files or Issues; no PR scope is enabled')
     if all(p == member['plan_path'] for p in paths):
+        if not member['plan_scope_active']:
+            raise ScopeError('PLAN-only scope is not activated')
         return 'Verified member PLAN-only proposal; implementation is not approved by this result'
     approval = member.get('implementation_approval')
-    if not approval:
+    if not approval or not member['scope_active']:
         raise ScopeError('Implementation PLAN and paths have not been approved by owner')
     if member['plan_path'] in paths:
         raise ScopeError('PLAN changes require a separate PLAN-only PR and fresh approval')
@@ -122,6 +146,38 @@ def evaluate(policy, author, files, expected_count, current_plan_sha=None):
         if not any(within(path, scope) for scope in approval['approved_paths']):
             raise ScopeError('Changed path exceeds owner-approved scope: '+path)
     return 'Verified member changes are within the exact approved PLAN and paths'
+
+
+def tree_entries(tree):
+    if not isinstance(tree,dict) or tree.get('truncated') is not False or not isinstance(tree.get('tree'),list):
+        raise ScopeError('Incomplete repository tree metadata')
+    entries={}
+    for item in tree['tree']:
+        path=safe_path(item.get('path'))
+        if path in entries: raise ScopeError('Duplicate tree metadata')
+        entries[path]=item
+    return entries
+
+
+def validate_file_modes(files, base_tree, head_tree):
+    """Metadata only; never downloads or executes untrusted file contents."""
+    base,head=tree_entries(base_tree),tree_entries(head_tree)
+    for f in files:
+        status=f['status'];name=f['filename']
+        endpoints=[]
+        if status!='added': endpoints.append((base,f.get('previous_filename',name)))
+        if status!='removed': endpoints.append((head,name))
+        for tree,path in endpoints:
+            entry=tree.get(path)
+            if not entry or entry.get('type')!='blob' or entry.get('mode') not in ('100644','100755'):
+                raise ScopeError('Changed file is missing, a symlink, submodule or unsupported mode')
+
+
+def validate_binding(pr, latest, trusted_sha):
+    if latest['state']!='open' or latest['head']['sha']!=pr['head']['sha']:
+        raise ScopeError('PR head/state changed during evaluation; current head must run separately')
+    if pr['base']['sha']!=trusted_sha or latest['base']['sha']!=trusted_sha:
+        raise ScopeError('Trusted policy is not current PR base; update/re-evaluate before merge')
 
 
 def api(path, token, data=None):
@@ -169,7 +225,8 @@ def run():
     sha = pr['head']['sha']
     if pr['base']['repo']['full_name'] != repo or pr['base']['ref'] != 'main' or pr['state'] != 'open':
         raise ScopeError('PR is not open against this main branch')
-    publish(repo,sha,token,'pending','Checking verified identity, trusted PLAN and every changed path')
+    binding=f'PR #{number}; head {sha[:10]}; policy {trusted_sha[:10]}'
+    publish(repo,sha,token,'pending',binding+'; checking scope')
     try:
         files = []
         # GitHub caps this endpoint at 3,000 files. Count mismatch fails closed.
@@ -180,6 +237,10 @@ def run():
             files.extend(batch)
             if len(batch) < 100:
                 break
+        changed_paths(files,pr['changed_files'])
+        base_tree=api(f'/repos/{repo}/git/trees/{pr["base"]["sha"]}?recursive=1',token)
+        head_tree=api(f'/repos/{repo}/git/trees/{sha}?recursive=1',token)
+        validate_file_modes(files,base_tree,head_tree)
         member = next((m for m in policy['members'] if m.get('id') == pr['user']['id'] and m.get('identity_status') == 'VERIFIED'),None)
         plan_sha = None
         if member and member.get('implementation_approval'):
@@ -190,10 +251,9 @@ def run():
             plan_sha = plan['sha']
         message = evaluate(policy,pr['user'],files,pr['changed_files'],plan_sha)
         latest = api(f'/repos/{repo}/pulls/{number}',token)
-        if latest['head']['sha'] != sha:
-            raise ScopeError('PR head changed during evaluation; current head must run separately')
-        publish(repo,sha,token,'success',message)
-        print(message)
+        validate_binding(pr,latest,trusted_sha)
+        publish(repo,sha,token,'success',binding+'; scope passed')
+        print(json.dumps({'pull_request':number,'head_sha':sha,'trusted_policy_commit':trusted_sha,'result':message}))
     except Exception as exc:
         reason = str(exc) if isinstance(exc,ScopeError) else 'GitHub data/API validation failed; gate closed'
         publish(repo,sha,token,'failure',reason)
