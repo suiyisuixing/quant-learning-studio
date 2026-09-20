@@ -13,7 +13,7 @@
 
 拟用仓库名：`quant-learning-studio`。用户曾使用`suiyisuixing`；这是待核对的预期owner，不得代替当前认证核验。先读取当前GitHub身份；若不匹配或没有建库权，暂停远端写操作，请用户在可信环境登录或确认owner。不得索取明文密码、PAT、SSH私钥。
 
-成员身份按`docs/TEAM_ROSTER.md`：开发仅Yu.Wei、Zaixuan.Ji、Xiangze.Zhu、Tianqi.Hao。Zaixuan login为`3165349449-tech`；Xiangze login为`trave1er999`（数字1）；Tianqi未知。两条映射来自用户，不再当成全部未知，也不能冒称GitHub ID已核验。执行时查询确切账户并记录真实ID；不根据同名搜索猜身份，不邀请其他项目组员，不自动授予上游write。未知Tianqi只阻塞其账号激活/分配，不阻塞其他任务。后三人非开发，GitHub账号可选，不要求注册后才交资料。当前名Xiangze.Zhu与旧Xingze.Zhu为同一人，迁移规则见TEAM_ROSTER。
+成员身份按`docs/TEAM_ROSTER.md`：开发仅Yu.Wei、Zaixuan.Ji、Xiangze.Zhu、Tianqi.Hao。Zaixuan login为`3165349449-tech`；Xiangze login为`trave1er999`（数字1）；Tianqi login为`tianqih649-glitch`。三条映射均来自用户，GitHub不可变ID已于2026-09-20核实并记录在名册。后续按确切账号核对；不根据同名搜索猜身份，不邀请其他项目组员，不授予上游write。成员本人在角色Issue回复参与确认；邀请采用任务评论 @mention，确认后核对可分派性。账号核实与代码范围批准分开。后三人非开发，GitHub账号可选，不要求注册后才交资料。当前名Xiangze.Zhu与旧Xingze.Zhu为同一人，迁移规则见TEAM_ROSTER。
 
 ## 二、最新人员类型与专业分工（最新用户指示优先）
 1. Yu.Wei：整体合并，数据量化，清洗，多指标策略，历史模拟，风险和费用计算，bug修复。
@@ -97,7 +97,7 @@ F2必须在演练前，F4必须在演练后；二者共用模型适配器可以�
 
 ## R3人员更新专项验收
 - 名册总数7，开发者恰好4，非开发恰好3；姓名别名不额外计数。
-- 3165349449-tech与trave1er999拼写无误；ID没有查询就为空；Tianqi未给账号就不猜/不assign。
+- 3165349449-tech、trave1er999、tianqih649-glitch 拼写及不可变 ID 与实际名册一致；本人确认、可分派状态和实施许可不伪造。
 - Xiangze的个人任务含真实模块代码、接口和对应测试；范围表不再把全部运行时代码禁止给他。
 - 后三人不被分派app/web/CI/部署/自动化测试源码；可用简单文件交资料/反馈；其提交作者与代录开发者分开。
 - 四位开发者的路径许可互不等于全仓库write；规则文件和公共入口仍由Yu控制。测试本来允许的案例文件、越界量化文件、非开发提交脚本、伪造身份和旧姓名重复映射等负例。

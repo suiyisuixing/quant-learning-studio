@@ -80,10 +80,10 @@
       "legacy_role_slug": null,
       "is_developer": true,
       "github_required": true,
-      "github_login": null,
+      "github_login": "tianqih649-glitch",
       "github_user_id": null,
-      "identity_status": "AWAITING_LOGIN",
-      "mapping_source": "current_user_says_unknown",
+      "identity_status": "USER_PROVIDED_PENDING_ACCOUNT_LOOKUP",
+      "mapping_source": "user_statement_2026-09-20",
       "scope_active": false,
       "allowed_code_paths": [],
       "allowed_document_paths": [],
@@ -151,7 +151,7 @@
     }
   ],
   "notes": [
-    "All immutable IDs remain null: no account API lookup was performed in this revision.",
+    "This is an inactive template. IDs remain null placeholders; actual verified identities are in docs/TEAM_ROSTER.md and .github/team-policy.json.",
     "intended_upstream_role and direct_upstream_write describe the intended owner/contributor arrangement, not a claim of verified live permissions.",
     "Only activate exact module paths after owner identity/account and actual source mapping are verified.",
     "Non-developers never receive code paths; document PR is optional, not a delivery requirement."

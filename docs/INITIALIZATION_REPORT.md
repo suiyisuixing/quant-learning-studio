@@ -1,5 +1,7 @@
 # R3 初始化执行记录
 
+历史记录说明：下文保留初始化时点证据。2026-09-20 已核实 Tianqi 的账号 tianqih649-glitch / 278631005；当前名册见 [TEAM_ROSTER](TEAM_ROSTER.md)，参与邀请及本人回复见 [加入 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1)。后续修改与测试以相应 PR 的精确 HEAD 和 CI 为准，不复用下文结果作为新测试。
+
 记录的是本次执行，不是产品四项完成报告。最终 PR/HEAD 与远端 CI 会记录在 Yu 的角色 Issue #2 和 R3-BOOT 任务中。
 
 - 同一个 public 仓库：https://github.com/suiyisuixing/quant-learning-studio 。main 基线为 57cf025d0a06aff2a936b628b784c8d4975e368f；R3 分支为 bootstrap/r3-collaboration，交 Yu 最终合并。分支内新名册不能冒充已激活的 main。

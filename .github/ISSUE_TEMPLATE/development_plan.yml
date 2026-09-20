@@ -13,6 +13,6 @@ body:
     id: plan
     attributes:
       label: PLAN 文件或 PR、步骤、输入输出、依赖、拟改路径、测试和交付
-      description: 使用 templates/MEMBER_PLAN.md 覆盖本人全部任务，按依赖而非周次；已批准后连续实施。Tianqi 无账号时先交文件，不猜身份。
+      description: 使用 templates/MEMBER_PLAN.md 覆盖本人全部任务，按依赖而非周次；已批准后连续实施。三名开发组员账号已登记，使用本人账号；身份核实不替代精确范围批准。
     validations:
       required: true

@@ -84,6 +84,6 @@ F1 市场数据的显示 → F2 人工智能的策划和分析 → 用户确认 
 开发组员通过PR交代码，最终由Yu.Wei合并；后三人按非开发交付流程提交资料和反馈；owner本人的提交按ACCESS_MODEL的明确例外流程处理，不伪造审批。
 
 ## R3四开发、三非开发的组长安排
-开发名单只包含你、Zaixuan.Ji、Xiangze.Zhu、Tianqi.Hao。Zaixuan的login登记为3165349449-tech，Xiangze为trave1er999；执行时查真实ID。Tianqi未知，不猜。Xiangze负责案例/学习内容模块代码和测试，不再只交研究文案。
+开发名单只包含你、Zaixuan.Ji、Xiangze.Zhu、Tianqi.Hao。Zaixuan的login登记为3165349449-tech，Xiangze为trave1er999，Tianqi为tianqih649-glitch；三人的真实ID已核实，见TEAM_ROSTER。本人参与确认与精确计划批准仍分别记录。Xiangze负责案例/学习内容模块代码和测试，不再只交研究文案。
 
 Yifan、Guanjie、Yuntao不写代码，资料与反馈可直接交文件或Issue。你或Xiangze审查后代录，保留内容作者、原始收件时间和实际录入者。不要为统计贡献伪造git author，也不要要求他们安装开发环境或写测试脚本。模块bug由原开发者修复，材料成员复测。

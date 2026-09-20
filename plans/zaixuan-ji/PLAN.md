@@ -65,4 +65,4 @@ PR及commit：
 测试与复测：
 AI帮助做了什么、我核对或修改了什么：
 
-Tianqi账号未提供时可先交这份本地计划给组长，GitHub字段保持待提供；不将计划存在当作身份已激活。Xiangze采用最新显示名，旧目录兼容按TEAM_ROSTER处理。
+开发账号与不可变 ID 采用 TEAM_ROSTER 中已核实映射；不将账号核实、模板存在或提交 PLAN 当作本人确认加入或实施已获批准。Xiangze采用最新显示名，旧目录兼容按TEAM_ROSTER处理。

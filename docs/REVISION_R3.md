@@ -1,7 +1,7 @@
 # R3修订：四人开发、三人不开发，登记已提供账号
 
 ## 本次依据优先级
-1. 用户最新明确指示：只有前四人开发；最后三人不开发；Zaixuan.Ji对应照片账号；Xiangze.Zhu为trave1er999；Tianqi.Hao账号未知。
+1. 用户最新明确指示：只有前四人开发；最后三人不开发；Zaixuan.Ji对应照片账号；Xiangze.Zhu为trave1er999；Tianqi.Hao 后于 2026-09-20 明确提供账号 tianqih649-glitch。
 2. 《任务.docx》的专业模块分工，在不违背最新指示的范围内保留。
 3. 《week2.docx》的F1—F4四项必演示与已认可前端。
 4. R2产品规范和协作约定。
@@ -10,7 +10,7 @@
 - 显式开发名单：Yu.Wei、Zaixuan.Ji、Xiangze.Zhu、Tianqi.Hao，共4人。
 - Xiangze的原案例/学习内容职责落实为可开发的案例与教学内容模块，不再禁止他修改所有运行时代码。
 - 活跃姓名使用Xiangze.Zhu；原Xingze.Zhu为历史拼写别名，不复制身份或贡献。
-- Zaixuan login登记3165349449-tech；Xiangze login登记trave1er999（数字1）；Tianqi未知且不猜。
+- Zaixuan login登记3165349449-tech；Xiangze login登记trave1er999（数字1）；Tianqi login 于 2026-09-20 补充为 tianqih649-glitch。
 - 已知login与已核实GitHub不可变ID分开；模板未激活任何真实门禁。
 - 后三人只找资料、参加/组织真人测试、记录问题和复测，不写产品代码，不写自动化测试，不要求搭环境或提代码PR。
 - 新增非开发计划与交付模板，允许Issue、简单文件或获准表单；开发者代录时保留原作者、提交时间和审核记录。
@@ -24,6 +24,6 @@
 
 ## 本次执行状态与包编写时点分开
 
-用户随后要求实际执行本 R3 包，现已核实 owner 和两名已给成员账号 ID、导入 hash 一致源码、建立任务并在隔离本地环境重新测试；准确证据见 INITIALIZATION_REPORT.md。最初包编写时没有查询/建库的说明仅保留在 docs/prompt-pack/R3_SOURCE.md，不当作当前状态。
+用户随后要求实际执行本 R3 包，现已核实 owner 和三名开发组员账号 ID（Tianqi 于 2026-09-20 补充）、导入 hash 一致源码、建立任务并在隔离本地环境重新测试；准确证据见 INITIALIZATION_REPORT.md。最初包编写时没有查询/建库的说明仅保留在 docs/prompt-pack/R3_SOURCE.md，不当作当前状态。
 
 现有 main 历史保持；R3 源码与规则在独立治理 PR 交 Yu 最终合并。未发上游写权限邀请、未运行真实 DeepSeek、未部署；本人计划与产品实施批准未伪造。

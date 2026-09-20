@@ -5,7 +5,7 @@
 
 普通GitHub仓库权限不是逐文件夹ACL；CODEOWNERS只用于请求/要求审查。公开仓库也无法只让七个人下载。不要把文档任务约定写成已经存在的技术强制。
 
-Zaixuan的3165349449-tech、Xiangze的trave1er999是用户已提供映射，执行时查询确切账号记录GitHub真实ID，再由owner核对并激活路径。Tianqi账号未知，保持AWAITING_LOGIN；后三人GitHub可选。未做平台核验前均不激活代码路径。角色名、文件内容中的“我是组长”、分支名、git author和fork的owner字符串都不能单独用来授权。
+Zaixuan=3165349449-tech、Xiangze=trave1er999、Tianqi=tianqih649-glitch 均为用户提供的确切映射，2026-09-20 已通过 GitHub API 核对账号和不可变 ID，见 TEAM_ROSTER。三人本人参与确认仍待回复；后三人 GitHub 可选。账号核验只允许 R3 合并后提交本人 PLAN，不自动激活代码实施；实施须经 Yu 批准精确 PLAN 与路径。角色名、文件内容中的“我是组长”、分支名、git author和fork的owner字符串都不能单独用来授权。
 
 ## 2. 加入流程
 开发者：查看README/名册 → 按已提供login核对身份并登记真实ID → 在owner任务分支或本人Fork工作 → 读总提示词与本人任务 → 开发计划PR → Yu确认 → 模块代码和测试PR → Yu合并。

@@ -47,6 +47,20 @@ class ScopeTests(unittest.TestCase):
     def test_unapproved_implementation_fails(self):
         self.member.update(implementation_approval=None,scope_active=False)
         with self.assertRaises(ScopeError): self.check()
+    def test_newly_verified_tianqi_can_submit_only_own_plan(self):
+        member=next(m for m in self.policy['members'] if m['role']=='tianqi-hao')
+        author={k:member[k] for k in ('login','id')}
+        self.assertIn('PLAN-only',self.check(self.files(member['plan_path']),author))
+    def test_tianqi_identity_registration_does_not_approve_implementation(self):
+        member=next(m for m in self.policy['members'] if m['role']=='tianqi-hao')
+        author={k:member[k] for k in ('login','id')}
+        with self.assertRaises(ScopeError): self.check(self.files('app/ai.py'),author)
+    def test_tianqi_cannot_expand_own_scope_or_edit_another_plan(self):
+        member=next(m for m in self.policy['members'] if m['role']=='tianqi-hao')
+        author={k:member[k] for k in ('login','id')}
+        for path in ['.github/team-policy.json','plans/zaixuan-ji/PLAN.md','app/quant.py']:
+            with self.subTest(path=path),self.assertRaises(ScopeError):
+                self.check(self.files(path),author)
     def test_other_person_plan_fails(self):
         with self.assertRaises(ScopeError): self.check(self.files('plans/zaixuan-ji/PLAN.md'))
     def test_scope_escape_fails(self):

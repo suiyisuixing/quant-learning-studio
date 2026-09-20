@@ -37,6 +37,6 @@ Yu 的具体实施范围见 [全量任务计划](../plans/yu-wei/PLAN.md)，共�
 - [[R3-MATERIAL] 论文与真人测试批次认领](https://github.com/suiyisuixing/quant-learning-studio/issues/18)
 - [[R3-E2E] 同一练习的四项完整浏览器演示](https://github.com/suiyisuixing/quant-learning-studio/issues/19)
 
-[加入与交接 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1)。两个已知成员账号已核实 ID，但 GitHub 暂不允许 issue assignment（404）；保持不 assign，不因此邀请 write。Tianqi 账号待提供。没有已建立表单，资料成员可交模板文件。
+[加入与交接 Issue #1](https://github.com/suiyisuixing/quant-learning-studio/issues/1)。三名开发组员账号及 ID 已于 2026-09-20 核实；邀请前 GitHub assignee eligibility 均为 404。在本人角色 Issue 接收 @mention 参与邀请、回复确认后，再据实核对可分派状态，不因此授予上游 write。没有已建立表单，资料成员可交模板文件。
 
 状态标签已实际建立：status:todo、status:in-progress、status:review、status:done、status:blocked。未另建项目看板或收费服务。

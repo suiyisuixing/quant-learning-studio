@@ -5,7 +5,7 @@ labels: ["type:governance", "status:todo"]
 body:
   - type: markdown
     attributes:
-      value: "已知映射：Zaixuan=3165349449-tech；Xiangze=trave1er999。Tianqi 待提供。不要提交密码、令牌、学号或私人邮箱。此表不授予上游写权。"
+      value: "已知映射：Zaixuan=3165349449-tech；Xiangze=trave1er999；Tianqi=tianqih649-glitch。不要提交密码、令牌、学号或私人邮箱。此表不授予上游写权。"
   - type: dropdown
     id: role
     attributes:

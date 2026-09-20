@@ -14,6 +14,8 @@
 |Guanjie.Xue|[Guanjie.Xue.md](members/Guanjie.Xue.md)|认领资料、原文核对、真人测试、问题与复测、完整文件交接|[#7](https://github.com/suiyisuixing/quant-learning-studio/issues/7)|
 |Yuntao.Min|[Yuntao.Min.md](members/Yuntao.Min.md)|认领资料、原文核对、真人测试、问题与复测、完整文件交接|[#8](https://github.com/suiyisuixing/quant-learning-studio/issues/8)|
 
+三名开发组员的 GitHub 账号已登记在[名册](../docs/TEAM_ROSTER.md)。请在本人角色 Issue 回复加入确认，然后从本页复制整份个人提示词。PR #20 合并前可阅读源码并填写计划；合并后同步 main，提交仅修改本人 PLAN 的 PR。
+
 开发者在完整 PLAN 和精确路径首次确认后，连续完成全部获准任务并提交 PR，最终由 Yu 合并；已批准的步骤不反复确认。三位非开发成员可直接交文件，不要求 GitHub、Fork 或编程。真实参与者操作和未授权的外部调用不能由提示词伪造完成。
 
 执行顺序与遇到依赖时的处理见 [全任务执行规则](EXECUTE_TO_COMPLETION.md)。统一产品要求见 [01_PRODUCT_MASTER.md](01_PRODUCT_MASTER.md)，任务/交接索引见 [TASKS.md](../docs/TASKS.md)。保留原 UI、四开发三资料测试以及 F1→F2→用户确认→F3→F4。

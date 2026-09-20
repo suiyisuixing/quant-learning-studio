@@ -12,7 +12,7 @@
 
 |任务|全部要做的事|交付与验收|依赖和边界|
 |---|---|---|---|
-|TH-01 全部接口与执行范围|核对现有 tutor/lesson/report，填全部任务 PLAN，约定前策划/后复盘上下文|四模块接口、路径及输入输出；账号保持待本人提供|缺账号先交文件，不借 owner 凭据|
+|TH-01 全部接口与执行范围|核对现有 tutor/lesson/report，填全部任务 PLAN，约定前策划/后复盘上下文|四模块接口、路径及输入输出；以已核实账号回复参与确认|本人 Fork；先 PLAN、后精确范围批准，不借 owner 凭据|
 |TH-02 统一资料上的检索|按 owner/审核/停用/市场/时间/用途过滤，检索相关段落并保留定位|app/retrieval.py、合法 evidence 与无结果/撤回测试|使用 Zaixuan 存储和 Xiangze 内容服务，不另建库|
 |TH-03 模型适配与真实状态|核查官方接口，后端调用、结构输出、版本/最少用量、有限重试/取消/错误|app/ai.py、四份 runtime 提示词、协议/失败测试|无授权密钥/预算只做 mock 协议，真实调用另记未运行|
 |TH-04 F2 演练前策划|只读当时 snapshot，检索论文、生成 DRAFT 和出处；交参数校验和用户确认|可编辑且可执行的计划草案及前策划专用证据|Yu 校验/批准，Zaixuan UI；不能读未来结果或自签批准|
@@ -25,7 +25,7 @@
 完成表内全部可执行工作后，统一交付每项的 DONE/BLOCKED 状态与证据；未执行或正在等待的内容不得勾选成功。提交了首个 PR/首份资料卡后继续余下任务，不等待下一次派工。
 
 ## 身份、范围和开工核对
-你的开发职责已经确定，GitHub用户名尚未提供，保持AWAITING_LOGIN。不得猜账号、创建假占位用户或借组长凭据。先填写本地计划、接口和环境；获得本人login后再补Fork/PR和真实ID核验。不因缺账号阻塞其他开发者。
+你的账号已由 Yu 提供，并于 2026-09-20 通过 GitHub API 核实为 `tianqih649-glitch` / `278631005`。请用该账号在本人任务 #5 回复确认本人控制账号、愿意参加且已读本提示词；当前参与状态仍待本人确认。使用自己的 Fork，不借组长凭据。先读取 PR #20 中的源码并填写全量 PLAN；Yu 合并初始化 PR 后同步 main，再提仅修改本人 PLAN 的 PR，精确范围批准后连续实施全部任务。
 
 先阅读`README.md`、`AGENTS.md`、`docs/PROJECT_PLAN.md`、`docs/ACCESS_MODEL.md`、实际模块边界和`prompts/01_PRODUCT_MASTER.md`、`docs/FOUR_FEATURES.md`、`docs/UI_BASELINE.md`、`docs/DEMO_SCRIPT.md`。可阅读和下载整个项目，但只在本人fork的任务分支提交授权范围。
 
@@ -69,7 +69,7 @@ F4：从服务器取APPROVED原计划、真实DecisionEvent、同一run结果/�
 计划中另外填写：我主责/支持/测试F1—F4的哪一部分，怎样接到前后步骤，哪些证据已取得，哪些NOT_RUN/BLOCKED。不要把本人模块完成直接写成四项整体通过。
 
 ## 修改范围
-拟新增 `app/ai.py`、`app/retrieval.py`、`app/learning.py`、`app/reports.py` 及 `tests/test_ai.py`、`tests/test_retrieval.py`、`tests/test_learning.py`、`tests/test_reports.py`；已有 `prompts/runtime/` 四份提示词；本人 PLAN 和 `evidence/tianqi-hao/`。新模块不是现有实现，账号和精确范围经核实批准后执行。页面与账户/数据库变更向Zaixuan提需求；公共schema与启动注册向Yu提需求。不要直接修改量化或全站样式。
+拟新增 `app/ai.py`、`app/retrieval.py`、`app/learning.py`、`app/reports.py` 及 `tests/test_ai.py`、`tests/test_retrieval.py`、`tests/test_learning.py`、`tests/test_reports.py`；已有 `prompts/runtime/` 四份提示词；本人 PLAN 和 `evidence/tianqi-hao/`。新模块不是现有实现；账号已核实，精确 PLAN 与实施范围仍须经 Yu 批准。页面与账户/数据库变更向Zaixuan提需求；公共schema与启动注册向Yu提需求。不要直接修改量化或全站样式。
 
 ## 验证清单
 真实可用接口单独验证；mock与真调用分开；答案实验绑定、跨账户访问、无结果、混市场、停用资料、虚假引用、数值不一致、文档指令注入、超时/失败/取消、保存与重开，以及同条件RAG对照。
